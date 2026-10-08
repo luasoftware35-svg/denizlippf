@@ -2,7 +2,7 @@ import { site } from "./site";
 
 export const serviceNav = [
   { href: "/denizli-gocuk", label: "Denizli Göçük" },
-  { href: "/denizli-ppf", label: "Denizli PPF" },
+  { href: "/denizli-ppf", label: "Denizli PPF kaplama" },
 ] as const;
 
 export const gocukLanding = {
@@ -68,12 +68,12 @@ export const gocukLanding = {
 
 export const ppfLanding = {
   path: "/denizli-ppf",
-  title: "Denizli PPF Kaplama | Propel 190 mikron | Inside",
+  title: "Denizli PPF Kaplama | Inside Merkezefendi",
   description:
-    "Denizli PPF kaplama — Propel 190 mikron boya koruma filmi, 7 yıl garanti. Tam ön, tam araç, tampon. Inside Merkezefendi. 0 536 270 07 95.",
-  kicker: "Denizli PPF",
+    "Denizli PPF kaplama Inside atölyesinde. Propel 190 mikron boya koruma filmi, tam ön ve tam araç, 7 yıl garanti. Merkezefendi Akçeşme. 0 536 270 07 95.",
+  kicker: "Denizli PPF kaplama",
   h1: "Denizli PPF Kaplama",
-  lead: "Propel 190 mikron şeffaf boya koruma filmi. Taş, çizik ve UV’ye karşı. 7 yıl garanti ayrıcalığıyla, Merkezefendi’de.",
+  lead: "Denizli PPF kaplama, boyanın üstüne yapışan şeffaf koruma filmidir. Inside’de Propel 190 mikron uygulanır. 7 yıl garanti, Merkezefendi Akçeşme.",
   image: "/images/frame-ppf.jpg",
   imageAlt: "Denizli PPF kaplama — Inside Propel 190 mikron uygulama",
   wa: "Merhaba, Denizli PPF kaplama için keşif ve randevu istiyorum.",
@@ -105,14 +105,24 @@ export const ppfLanding = {
     {
       heading: "Denizli PPF nerede uygulanır?",
       body: [
-        "Film Merkezefendi Akçeşme atölyesinde, tozsuz ortamda kesilir ve yapıştırılır. Pamukkale ve Servergazi’den randevuyla gelinir. Pazartesi–Cumartesi 08:00–19:30, Pazar kapalı.",
+        "Denizli PPF kaplama Merkezefendi Akçeşme’de, Zafer Caddesi No:145/A, 9. Noter arkasında yapılır. Film tozsuz ortamda kesilir ve yapıştırılır. Pamukkale ve Servergazi’den randevuyla gelinir. Pazartesi–Cumartesi 08:00–19:30, Pazar kapalı.",
+      ],
+    },
+    {
+      heading: "PPF ile cam filmi aynı iş değil",
+      body: [
+        "Denizli PPF kaplama boyayı korur: kaput, tampon, çamurluk ve istenirse tüm araç. Cam filmi cama yapışır, içeriği gölgeler. Inside’de iş boya koruma filmidir; Propel 190 mikron TPU, şeffaf kalır, rengi değiştirmez.",
       ],
     },
   ],
   faqs: [
     {
       q: "Denizli PPF kaplama nerede yapılır?",
-      a: `Denizli PPF Inside atölyesinde uygulanır: ${site.address}. Propel 190 mikron, 7 yıl garanti. Randevuyla, Pazartesi–Cumartesi 08:00–19:30.`,
+      a: `Denizli PPF kaplama Inside atölyesinde uygulanır: ${site.address}. Propel 190 mikron, 7 yıl garanti. Randevuyla, Pazartesi–Cumartesi 08:00–19:30.`,
+    },
+    {
+      q: "Denizli PPF kaplama fiyatı neye göre çıkar?",
+      a: "Fiyat kaplanacak parçaya göre değişir. Tampon koruma, tam ön ve tam araç aynı kalem değildir. Keşif ücretsizdir; WhatsApp’tan panel fotoğrafı çoğu zaman yeter, net rakam araç gün ışığındayken söylenir.",
     },
     {
       q: "Denizli PPF ne kadar sürer?",

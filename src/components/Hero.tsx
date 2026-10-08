@@ -60,7 +60,7 @@ export function Hero() {
             </Link>
             <span aria-hidden> · </span>
             <Link href="/denizli-ppf" className="hover:text-paper">
-              Denizli PPF
+              Denizli PPF kaplama
             </Link>
           </p>
           <a

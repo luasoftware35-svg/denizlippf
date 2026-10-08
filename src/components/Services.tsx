@@ -15,7 +15,7 @@ const cards = [
     cat: "gocuk",
   },
   {
-    title: "Denizli PPF",
+    title: "Denizli PPF kaplama",
     image: "/images/frame-ppf.jpg",
     alt: "Denizli PPF kaplama — Propel 190 mikron, Inside",
     href: "/denizli-ppf",
@@ -25,14 +25,14 @@ const cards = [
     title: extras[0].title,
     image: "/images/frame-bmw.jpg",
     alt: "Inside tam ön PPF uygulaması",
-    href: "/iletisim",
+    href: "/denizli-ppf",
     cat: "ppf",
   },
   {
     title: extras[1].title,
     image: "/images/frame-volvo.jpg",
     alt: "Inside tam araç PPF ve göçük onarımı",
-    href: "/iletisim",
+    href: "/denizli-ppf",
     cat: "koruma",
   },
 ];

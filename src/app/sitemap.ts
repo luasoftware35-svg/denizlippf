@@ -3,7 +3,7 @@ import { landings } from "@/data/landings";
 import { legalNav, site } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-10-08");
+  const lastModified = new Date("2026-10-09");
   return [
     {
       url: site.domain,
