@@ -3,6 +3,14 @@ import { Shot } from "./Shot";
 
 const shots = [
   {
+    src: "/images/frame-inside.jpg",
+    alt: "Inside PDR-PPF atölyesi, Merkezefendi Denizli",
+  },
+  {
+    src: "/images/frame-propel.jpg",
+    alt: "Inside Denizli’de Propel 190 mikron PPF uygulaması",
+  },
+  {
     src: "/images/frame-shop.jpg",
     alt: "Inside Denizli PPF-PDR atölyesi, Merkezefendi",
   },

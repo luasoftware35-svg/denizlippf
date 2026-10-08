@@ -10,13 +10,13 @@ export function Why() {
           <Reveal from="clip">
             <div className="grid grid-cols-2 gap-3 lg:block">
               <Shot
-                src="/images/frame-ppf.jpg"
-                alt="Denizli PPF kaplama atölyesi — Inside Merkezefendi"
+                src="/images/frame-inside.jpg"
+                alt="Inside PDR-PPF atölyesi, Merkezefendi Denizli"
                 sizes="(max-width: 1024px) 50vw, 50vw"
               />
               <Shot
-                src="/images/frame-bmw.jpg"
-                alt="Inside atölyesinde teslim edilen araç"
+                src="/images/frame-propel.jpg"
+                alt="Inside Denizli’de Propel 190 mikron PPF uygulaması"
                 sizes="(max-width: 1024px) 50vw, 50vw"
                 className="lg:hidden"
               />
@@ -42,8 +42,8 @@ export function Why() {
             <div className="mt-12 hidden lg:block">
               <Reveal from="clip" delay={0.12}>
                 <Shot
-                  src="/images/frame-bmw.jpg"
-                  alt="Inside atölyesinde teslim edilen araç"
+                  src="/images/frame-propel.jpg"
+                  alt="Inside Denizli’de Propel 190 mikron PPF uygulaması"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </Reveal>

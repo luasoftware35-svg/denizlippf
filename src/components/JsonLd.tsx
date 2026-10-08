@@ -21,10 +21,12 @@ export function JsonLd() {
     email: site.email,
     logo: `${site.domain}/images/logo.png`,
     image: [
+      `${site.domain}/images/frame-inside-hero.jpg`,
+      `${site.domain}/images/frame-inside.jpg`,
+      `${site.domain}/images/frame-propel.jpg`,
       `${site.domain}/images/frame-shop.jpg`,
       `${site.domain}/images/frame-pdr.jpg`,
       `${site.domain}/images/frame-ppf.jpg`,
-      `${site.domain}/images/frame-bmw.jpg`,
     ],
     description: seo.description,
     slogan: site.tagline,

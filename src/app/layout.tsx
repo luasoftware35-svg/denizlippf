@@ -77,12 +77,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="tr"
       className={`${outfit.variable} h-full antialiased`}
     >
+      <head>
+        <Analytics />
+      </head>
       <body className="min-h-full bg-white font-sans text-paper">
         <ScrollProgress />
         <HashRedirect />
         {children}
         <CookieConsent />
-        <Analytics />
       </body>
     </html>
   );

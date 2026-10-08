@@ -4,7 +4,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Çerez Politikası",
-  description: `${site.name} çerez politikası. Zorunlu çerezler, tercih kaydı ve Google Haritalar üçüncü taraf çerezleri.`,
+  description: `${site.name} çerez politikası. Zorunlu çerezler, Google Haritalar ve isteğe bağlı Analytics.`,
   alternates: { canonical: "/cerez-politikasi" },
 };
 
@@ -29,13 +29,13 @@ export default function CerezPage() {
         {
           heading: "Harita / üçüncü taraf",
           body: [
-            "“Kabul et” seçeneğiyle iletişim bölümündeki Google Haritalar gömülü haritası yüklenir. Google, kendi çerez ve gizlilik politikasına göre konum ve cihaz verisi işleyebilir. Yalnızca zorunlu çerezleri seçerseniz harita yüklenmez; yol tarifi Google Haritalar’da yeni sekmede açılır.",
+            "İletişim bölümündeki gömülü Google Haritalar, atölye konumunu göstermek için sayfa açılışında yüklenir. Google, kendi çerez ve gizlilik politikasına göre konum ve cihaz verisi işleyebilir.",
           ],
         },
         {
           heading: "Analitik",
           body: [
-            "“Kabul et” seçeneğiyle Google Analytics 4 yüklenir. Google Ireland Limited, sayfa görüntüleme ve tıklama ölçümü için çerez kullanabilir. Yalnızca zorunlu çerezleri seçerseniz Analytics yüklenmez. Reklam pikseli kullanılmaz.",
+            "Google etiketi sayfada Consent Mode ile durur; ölçüm çerezleri ancak “Kabul et”ten sonra açılır. Google Ireland Limited, onayınız varsa sayfa görüntüleme ve tıklama ölçümü için çerez kullanabilir. Yalnızca zorunlu çerezleri seçerseniz analytics_storage kapalı kalır. Reklam pikseli kullanılmaz.",
           ],
         },
         {

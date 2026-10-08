@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import { track } from "@/lib/analytics";
 import { site, waLink } from "@/data/site";
-import { CONSENT_EVENT, readConsent, type Consent } from "@/lib/consent";
 import { Reveal } from "./Reveal";
 
 export function Contact() {
@@ -12,14 +11,6 @@ export function Contact() {
   const [phone, setPhone] = useState("");
   const [service, setService] = useState("Göçük düzeltme");
   const [note, setNote] = useState("");
-  const [consent, setConsent] = useState<Consent | null>(null);
-
-  useEffect(() => {
-    const sync = () => setConsent(readConsent());
-    sync();
-    window.addEventListener(CONSENT_EVENT, sync);
-    return () => window.removeEventListener(CONSENT_EVENT, sync);
-  }, []);
 
   function submit(e: FormEvent) {
     e.preventDefault();
@@ -90,30 +81,13 @@ export function Contact() {
             </a>
           </div>
           <div className="relative mt-10 aspect-[16/10] overflow-hidden bg-bg-3">
-            {consent === "all" ? (
-              <iframe
-                title="Inside PPF-PDR Denizli harita"
-                src={`https://maps.google.com/maps?q=${site.geo.lat},${site.geo.lng}&z=16&output=embed`}
-                className="map-in h-full w-full border-0 grayscale"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            ) : (
-              <div className="flex h-full flex-col items-center justify-center gap-4 px-6 text-center">
-                <p className="text-[14px] leading-6 text-muted">
-                  Harita, çerez onayı sonrasında yüklenir.
-                </p>
-                <a
-                  href={site.maps}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="ghost-btn"
-                >
-                  Google Haritalar’da aç
-                  <span aria-hidden>→</span>
-                </a>
-              </div>
-            )}
+            <iframe
+              title="Inside PPF-PDR Denizli harita"
+              src={`https://maps.google.com/maps?q=${site.geo.lat},${site.geo.lng}&z=16&output=embed`}
+              className="map-in h-full w-full border-0 grayscale"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </Reveal>
 

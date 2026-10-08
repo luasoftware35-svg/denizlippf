@@ -9,16 +9,16 @@ export function Hero() {
       id="ust"
       className="relative flex h-[100svh] flex-col overflow-hidden bg-white lg:block lg:h-auto lg:min-h-[100svh]"
     >
-      <div className="hero-bleed pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] overflow-hidden lg:block">
-        <Parallax className="absolute inset-x-0 -top-[10%] -bottom-[10%]" strength={0.12}>
+      <div className="hero-bleed pointer-events-none absolute inset-y-[7%] right-0 hidden w-[34%] overflow-hidden lg:block">
+        <Parallax className="absolute inset-0" strength={0.06}>
           <div className="relative h-full">
             <Image
-              src="/images/frame-shop.jpg"
-              alt="Inside Denizli göçük düzeltme ve PPF atölyesi, Merkezefendi"
+              src="/images/frame-inside-hero.jpg"
+              alt="Inside PDR-PPF atölyesi, Merkezefendi Denizli"
               fill
               priority
-              sizes="42vw"
-              className="hero-ken object-cover object-[center_28%]"
+              sizes="34vw"
+              className="object-cover object-[center_28%]"
             />
           </div>
         </Parallax>
@@ -87,8 +87,8 @@ export function Hero() {
           <div className="hero-float absolute -left-[32%] top-[20%] z-10 w-[58%] max-w-[340px] overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.14)]">
             <div className="shot-frame relative aspect-[4/5]">
               <Image
-                src="/images/frame-bmw.jpg"
-                alt="Inside Denizli atölyesinde teslim edilen araç"
+                src="/images/frame-propel.jpg"
+                alt="Inside Denizli’de Propel 190 mikron PPF uygulaması"
                 fill
                 sizes="340px"
                 className="object-cover object-center"
@@ -100,12 +100,12 @@ export function Hero() {
 
       <div className="hero-bleed relative min-h-0 w-full flex-1 overflow-hidden lg:hidden">
         <Image
-          src="/images/frame-shop.jpg"
-          alt="Inside Denizli göçük düzeltme ve PPF atölyesi, Merkezefendi"
+          src="/images/frame-inside-hero.jpg"
+          alt="Inside PDR-PPF atölyesi, Merkezefendi Denizli"
           fill
           priority
           sizes="100vw"
-          className="hero-ken object-cover object-[center_42%]"
+          className="object-cover object-[center_32%]"
         />
       </div>
 
