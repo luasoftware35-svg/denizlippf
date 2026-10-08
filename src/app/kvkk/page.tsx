@@ -35,7 +35,7 @@ export default function KvkkPage() {
         {
           heading: "Aktarım",
           body: [
-            "Formu WhatsApp üzerinden gönderdiğinizde ad, telefon ve notunuz Meta Platforms Ireland Limited / WhatsApp altyapısına iletilir. Harita için Google LLC / Google Ireland Limited çerez ve teknik verileri işleyebilir. Yasal zorunluluk halinde yetkili kamu kurumlarına; barındırma ve bilişim hizmeti alınan tedarikçilere gizlilik taahhüdü altında aktarım yapılabilir.",
+            "Formu WhatsApp üzerinden gönderdiğinizde ad, telefon ve notunuz Meta Platforms Ireland Limited / WhatsApp altyapısına iletilir. Harita ve (onayınız varsa) Google Analytics için Google Ireland Limited çerez ve teknik verileri işleyebilir. Yasal zorunluluk halinde yetkili kamu kurumlarına; barındırma ve bilişim hizmeti alınan tedarikçilere gizlilik taahhüdü altında aktarım yapılabilir.",
           ],
         },
         {

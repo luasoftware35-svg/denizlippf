@@ -17,7 +17,7 @@ export default function GizlilikPage() {
         {
           heading: "Kapsam",
           body: [
-            "Bu politika; denizlippf.com alan adı, randevu formu, WhatsApp hattı ve sitedeki Google Haritalar gömülü alanından toplanan bilgileri kapsar.",
+            "Bu politika; denizlippf.com alan adı, randevu formu, WhatsApp hattı, sitedeki Google Haritalar gömülü alanı ve onay verdiğinizde Google Analytics ölçümünden toplanan bilgileri kapsar.",
           ],
         },
         {

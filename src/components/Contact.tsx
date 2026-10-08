@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react";
+import { track } from "@/lib/analytics";
 import { site, waLink } from "@/data/site";
 import { CONSENT_EVENT, readConsent, type Consent } from "@/lib/consent";
 import { Reveal } from "./Reveal";
@@ -31,6 +32,7 @@ export function Contact() {
     ]
       .filter(Boolean)
       .join("\n");
+    track("generate_lead", { method: "whatsapp_form", service });
     window.open(waLink(text), "_blank", "noopener,noreferrer");
   }
 

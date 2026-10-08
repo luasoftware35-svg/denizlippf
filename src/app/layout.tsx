@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
+import { Analytics } from "@/components/Analytics";
 import { CookieConsent } from "@/components/CookieConsent";
+import { googleSiteVerification } from "@/lib/analytics";
 import { seo } from "@/lib/seo";
 import { site } from "@/data/site";
 import "./globals.css";
@@ -50,6 +52,9 @@ export const metadata: Metadata = {
   },
   icons: { icon: "/favicon.svg", apple: "/images/favicon.png" },
   formatDetection: { telephone: true, address: true, email: true },
+  ...(googleSiteVerification
+    ? { verification: { google: googleSiteVerification } }
+    : {}),
   other: {
     "geo.region": "TR-20",
     "geo.placename": "Denizli",
@@ -73,6 +78,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full bg-white font-sans text-paper">
         {children}
         <CookieConsent />
+        <Analytics />
       </body>
     </html>
   );

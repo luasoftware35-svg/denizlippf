@@ -33,9 +33,9 @@ export default function CerezPage() {
           ],
         },
         {
-          heading: "Analitik ve reklam",
+          heading: "Analitik",
           body: [
-            "Şu an sitede reklam veya izleme pikseli kullanılmamaktadır. İleride eklenirse bu metin güncellenir ve tercih yeniden sorulur.",
+            "“Kabul et” seçeneğiyle Google Analytics 4 yüklenir. Google Ireland Limited, sayfa görüntüleme ve tıklama ölçümü için çerez kullanabilir. Yalnızca zorunlu çerezleri seçerseniz Analytics yüklenmez. Reklam pikseli kullanılmaz.",
           ],
         },
         {

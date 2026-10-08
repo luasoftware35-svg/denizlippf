@@ -1,9 +1,13 @@
+"use client";
+
+import { track } from "@/lib/analytics";
 import { waLink } from "@/data/site";
 
 export function WhatsApp() {
   return (
     <a
       href={waLink()}
+      onClick={() => track("whatsapp_click", { method: "fab" })}
       className="wa-fab fixed right-4 bottom-[max(1.25rem,env(safe-area-inset-bottom))] z-40 grid h-12 w-12 place-items-center rounded-full bg-wa text-white shadow-[0_10px_30px_rgba(37,211,102,0.45)] transition-transform duration-300 hover:scale-110 sm:right-6 sm:h-14 sm:w-14"
       aria-label="WhatsApp ile yazın"
     >
