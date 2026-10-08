@@ -19,7 +19,7 @@ export function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-[70] border-t border-line bg-white/95 px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-[0_-10px_40px_rgba(0,0,0,0.06)] backdrop-blur-md sm:px-6 lg:px-10">
+    <div className="fixed inset-x-0 bottom-0 z-[70] border-t border-line bg-white/95 px-4 py-4 pr-16 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-[0_-10px_40px_rgba(0,0,0,0.06)] backdrop-blur-md sm:px-6 sm:pr-24 lg:px-10">
       <div className="mx-auto flex max-w-[1200px] flex-col gap-4 md:flex-row md:items-center md:justify-between md:pr-20">
         <p className="max-w-2xl text-[13px] leading-6 text-muted">
           Sitede zorunlu çerezler kullanılır. Harita için Google çerezlerine izin

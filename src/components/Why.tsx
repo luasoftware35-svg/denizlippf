@@ -4,15 +4,23 @@ import { Shot } from "./Shot";
 
 export function Why() {
   return (
-    <section id="hakkimizda" className="relative overflow-hidden bg-white py-24 md:py-32">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-10">
-        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+    <section id="hakkimizda" className="relative overflow-hidden bg-white py-16 sm:py-24 md:py-32">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-6 lg:px-10">
+        <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-16">
           <Reveal from="left">
-            <Shot
-              src="/images/shot-wrap.jpg"
-              alt="Inside PPF atölyesi, Merkezefendi"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
+            <div className="grid grid-cols-2 gap-3 lg:block">
+              <Shot
+                src="/images/shot-wrap.jpg"
+                alt="Inside PPF atölyesi, Merkezefendi"
+                sizes="(max-width: 1024px) 50vw, 50vw"
+              />
+              <Shot
+                src="/images/shot-bmw.jpg"
+                alt="Inside atölyesinde teslim edilen araç"
+                sizes="(max-width: 1024px) 50vw, 50vw"
+                className="lg:hidden"
+              />
+            </div>
           </Reveal>
 
           <Reveal delay={0.08} from="right">
@@ -27,7 +35,7 @@ export function Why() {
               İletişime Geçin
               <span aria-hidden>→</span>
             </a>
-            <div className="mt-12">
+            <div className="mt-12 hidden lg:block">
               <Shot
                 src="/images/shot-bmw.jpg"
                 alt="Inside atölyesinde teslim edilen araç"

@@ -53,7 +53,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
       }`}
     >
       <div
-        className={`flex items-center px-6 py-4 lg:px-10 ${overlay ? "lg:w-[58%]" : "w-full"}`}
+        className={`flex w-full items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:justify-start lg:px-10 lg:py-4 ${overlay ? "lg:w-[58%]" : ""}`}
       >
         <Link href="/" className="flex shrink-0 items-center transition-opacity hover:opacity-70">
           <Image
@@ -61,7 +61,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
             alt="Inside PDR-PPF"
             width={180}
             height={47}
-            className="h-10 w-auto"
+            className="h-8 w-auto sm:h-10"
             priority
           />
         </Link>
@@ -88,7 +88,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
 
         <button
           type="button"
-          className="grid h-10 w-10 place-items-center lg:hidden"
+          className="-mr-1 grid h-11 w-11 shrink-0 place-items-center lg:hidden"
           aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
           onClick={() => setOpen((v) => !v)}
         >
@@ -104,7 +104,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
       </div>
 
       {open ? (
-        <div className="border-t border-line bg-white px-6 py-8 lg:hidden">
+        <div className="max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-t border-line bg-white px-5 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] lg:hidden">
           <nav className="flex flex-col gap-5">
             {items.map((item, i) => (
               <Link

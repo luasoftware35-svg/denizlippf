@@ -2,8 +2,8 @@ import { Reveal } from "./Reveal";
 
 export function Copy() {
   return (
-    <section className="bg-white py-20 md:py-28">
-      <div className="mx-auto grid max-w-[1100px] gap-16 px-6 md:grid-cols-2 lg:px-10">
+    <section className="bg-white py-16 sm:py-20 md:py-28">
+      <div className="mx-auto grid max-w-[1100px] gap-10 px-5 sm:px-6 md:grid-cols-2 md:gap-16 lg:px-10">
         <Reveal from="left">
           <h2 className="text-3xl font-medium tracking-tight">
             Denizli göçük düzeltme

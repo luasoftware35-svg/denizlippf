@@ -8,10 +8,10 @@ export function Faq() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section id="sss" className="bg-white py-20 md:py-28">
-      <div className="mx-auto max-w-[880px] px-6 lg:px-10">
+    <section id="sss" className="bg-white py-16 sm:py-20 md:py-28">
+      <div className="mx-auto max-w-[880px] px-5 sm:px-6 lg:px-10">
         <Reveal>
-          <h2 className="text-center text-4xl font-medium tracking-tight md:text-5xl">
+          <h2 className="text-center text-[1.85rem] font-medium tracking-tight sm:text-4xl md:text-5xl">
             Sık Sorulan <span className="text-gold">Sorular</span>
           </h2>
         </Reveal>
@@ -22,7 +22,7 @@ export function Faq() {
               <div key={f.q} className="py-1">
                 <button
                   type="button"
-                  className="flex w-full cursor-pointer items-center justify-between gap-6 py-5 text-left text-lg"
+                  className="flex min-h-12 w-full cursor-pointer items-center justify-between gap-4 py-4 text-left text-[16px] sm:gap-6 sm:py-5 sm:text-lg"
                   aria-expanded={isOpen}
                   onClick={() => setOpen(isOpen ? -1 : i)}
                 >

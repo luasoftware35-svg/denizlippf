@@ -5,7 +5,7 @@ import { GenuaPartner } from "./GenuaPartner";
 
 export function Footer() {
   return (
-    <footer className="bg-white px-6 py-16 lg:px-10">
+    <footer className="bg-white px-5 py-12 sm:px-6 sm:py-16 lg:px-10">
       <div className="mx-auto grid max-w-[1200px] gap-12 md:grid-cols-3">
         <div>
           <Link href="/" className="inline-block">
@@ -24,7 +24,7 @@ export function Footer() {
         </div>
         <div>
           <h3 className="text-sm font-semibold">İletişime Geç</h3>
-          <ul className="mt-4 space-y-2 text-[14px] text-muted">
+          <ul className="mt-4 space-y-2 break-words text-[14px] text-muted">
             <li>
               <a href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</a>
             </li>

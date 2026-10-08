@@ -30,17 +30,17 @@ const shots = [
 
 export function Gallery() {
   return (
-    <section id="atolye" className="bg-white py-20 md:py-28">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-10">
+    <section id="atolye" className="bg-white py-16 sm:py-20 md:py-28">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-6 lg:px-10">
         <Reveal>
           <p className="text-center text-[12px] tracking-[0.32em] text-gold uppercase">
             Atölye
           </p>
-          <h2 className="mt-4 text-center text-4xl font-medium tracking-tight md:text-5xl">
+          <h2 className="mt-4 text-center text-[1.85rem] font-medium tracking-tight sm:text-4xl md:text-5xl">
             Film görünmez, iş görünür.
           </h2>
         </Reveal>
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-4 lg:grid-cols-3">
           {shots.map((s, i) => (
             <Reveal key={s.src} delay={i * 0.05}>
               <Shot src={s.src} alt={s.alt} sizes="(max-width: 1024px) 50vw, 33vw" />

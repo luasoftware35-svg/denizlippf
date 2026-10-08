@@ -35,10 +35,10 @@ export function Contact() {
   }
 
   return (
-    <section id="iletisim" className="bg-bg-2 py-20 md:py-28">
-      <div className="mx-auto grid max-w-[1100px] gap-16 px-6 md:grid-cols-2 lg:px-10">
+    <section id="iletisim" className="bg-bg-2 py-16 sm:py-20 md:py-28">
+      <div className="mx-auto grid max-w-[1100px] gap-10 px-5 sm:px-6 md:grid-cols-2 md:gap-16 lg:px-10">
         <Reveal from="left">
-          <h2 className="text-4xl font-medium tracking-tight md:text-5xl">
+          <h2 className="text-[1.85rem] font-medium tracking-tight sm:text-4xl md:text-5xl">
             Bizden haberdar olun
           </h2>
           <p className="mt-5 max-w-md text-[15px] leading-8 text-muted">
@@ -48,7 +48,7 @@ export function Contact() {
           <p className="mt-4 text-[14px] text-gold">
             Google {site.rating} · {site.reviewCount} yorum
           </p>
-          <ul className="mt-8 space-y-3 text-[15px] text-paper">
+          <ul className="mt-8 space-y-3 break-words text-[15px] text-paper">
             <li>
               <a href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</a>
             </li>
@@ -71,8 +71,8 @@ export function Contact() {
             </li>
             <li>{site.hours}</li>
           </ul>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={`tel:${site.phoneTel}`} className="gold-btn">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a href={`tel:${site.phoneTel}`} className="gold-btn w-full sm:w-auto">
               Ara
               <span aria-hidden>→</span>
             </a>
@@ -80,7 +80,7 @@ export function Contact() {
               href={site.maps}
               target="_blank"
               rel="noreferrer"
-              className="ghost-btn"
+              className="ghost-btn w-full sm:w-auto"
             >
               Yol tarifi
               <span aria-hidden>→</span>
@@ -115,7 +115,7 @@ export function Contact() {
         </Reveal>
 
         <Reveal delay={0.1} from="right">
-          <form onSubmit={submit} className="bg-white p-8 shadow-[0_10px_40px_rgba(0,0,0,0.04)]">
+          <form onSubmit={submit} className="bg-white p-5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] sm:p-8">
             <label className="block text-[13px] text-muted">
               Ad soyad
               <input

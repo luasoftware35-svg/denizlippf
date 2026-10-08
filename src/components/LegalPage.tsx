@@ -20,7 +20,7 @@ export function LegalPage({
             <p className="text-[12px] tracking-[0.32em] text-gold uppercase">
               Yasal
             </p>
-            <h1 className="mt-4 text-4xl font-medium tracking-tight md:text-5xl">
+            <h1 className="mt-4 text-[1.85rem] font-medium tracking-tight sm:text-4xl md:text-5xl">
               {title}
             </h1>
             <p className="mt-5 text-[15px] leading-8 text-muted">{intro}</p>
