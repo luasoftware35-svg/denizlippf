@@ -35,7 +35,7 @@ export default function CerezPage() {
         {
           heading: "Analitik",
           body: [
-            "Google etiketi sayfada Consent Mode ile durur; ölçüm çerezleri ancak “Kabul et”ten sonra açılır. Google Ireland Limited, onayınız varsa sayfa görüntüleme ve tıklama ölçümü için çerez kullanabilir. Yalnızca zorunlu çerezleri seçerseniz analytics_storage kapalı kalır. Reklam pikseli kullanılmaz.",
+            "Google etiketi sayfada açık durur ve sayfa görüntülemeyi ölçer. “Yalnızca zorunlu” seçeneği analytics_storage değerini kapatır. Google Ireland Limited ölçüm için çerez kullanabilir. Reklam pikseli kullanılmaz.",
           ],
         },
         {
