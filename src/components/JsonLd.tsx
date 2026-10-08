@@ -1,27 +1,38 @@
 import { faqs, site } from "@/data/site";
+import { businessId, seo, websiteId } from "@/lib/seo";
 
 export function JsonLd() {
   const local = {
     "@context": "https://schema.org",
-    "@type": "AutoRepair",
+    "@type": ["AutoRepair", "AutomotiveBusiness"],
+    "@id": businessId,
     name: site.legalName,
     legalName: site.legalName,
-    alternateName: ["Inside", "İnside", "INSIDE", "Inside PPF-PDR", "Denizli PPF", "Denizli Göçük"],
+    alternateName: [
+      "Inside",
+      "INSIDE",
+      "Inside PPF-PDR",
+      "Denizli PPF",
+      "Denizli Göçük",
+      "Denizli göçük düzeltme",
+    ],
     url: site.domain,
     telephone: site.phoneTel,
     email: site.email,
+    logo: `${site.domain}/images/logo.png`,
     image: [
-      `${site.domain}/images/shop.jpg`,
-      `${site.domain}/images/detail.jpg`,
-      `${site.domain}/images/bmw.jpg`,
+      `${site.domain}/images/shot-shop.jpg`,
+      `${site.domain}/images/shot-detail.jpg`,
+      `${site.domain}/images/shot-wrap.jpg`,
+      `${site.domain}/images/shot-bmw.jpg`,
     ],
-    description:
-      "Inside, 2017’den beri Denizli’de boyasız göçük düzeltme (PDR), Propel 190 mikron PPF boya koruma filmi ve seramik kaplama. 7 yıl garanti.",
+    description: seo.description,
+    slogan: site.tagline,
     address: {
       "@type": "PostalAddress",
       streetAddress: site.streetAddress,
-      addressLocality: site.city,
-      addressRegion: site.region,
+      addressLocality: "Denizli",
+      addressRegion: "Denizli",
       postalCode: site.postalCode,
       addressCountry: "TR",
     },
@@ -32,12 +43,12 @@ export function JsonLd() {
     },
     hasMap: site.maps,
     areaServed: [
-      "Denizli",
-      "Pamukkale",
-      "Merkezefendi",
-      "Servergazi",
-      "Acıpayam",
-      "Çivril",
+      { "@type": "City", name: "Denizli" },
+      { "@type": "AdministrativeArea", name: "Pamukkale" },
+      { "@type": "AdministrativeArea", name: "Merkezefendi" },
+      { "@type": "AdministrativeArea", name: "Servergazi" },
+      { "@type": "AdministrativeArea", name: "Acıpayam" },
+      { "@type": "AdministrativeArea", name: "Çivril" },
     ],
     openingHours: site.openingHours,
     openingHoursSpecification: {
@@ -54,14 +65,36 @@ export function JsonLd() {
       closes: "19:30",
     },
     priceRange: "$$",
+    currenciesAccepted: "TRY",
+    paymentAccepted: "Cash, Credit Card",
     foundingDate: String(site.founded),
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: String(site.rating),
       reviewCount: String(site.reviewCount),
       bestRating: "5",
+      worstRating: "1",
     },
     sameAs: [site.maps, site.instagramUrl],
+    identifier: {
+      "@type": "PropertyValue",
+      propertyID: "google_kgmid",
+      value: "/g/11d_ynn_bq",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: site.phoneTel,
+      contactType: "customer service",
+      areaServed: "TR",
+      availableLanguage: ["Turkish"],
+    },
+    knowsAbout: [
+      "Denizli göçük düzeltme",
+      "Boyasız göçük düzeltme (PDR)",
+      "Denizli PPF kaplama",
+      "Propel 190 mikron PPF",
+      "Seramik kaplama",
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Denizli göçük ve PPF hizmetleri",
@@ -72,6 +105,9 @@ export function JsonLd() {
             "@type": "Service",
             name: "Denizli Göçük Düzeltme",
             serviceType: "Boyasız göçük düzeltme (PDR)",
+            areaServed: { "@type": "City", name: "Denizli" },
+            provider: { "@id": businessId },
+            url: `${site.domain}/#hizmetler`,
           },
         },
         {
@@ -80,6 +116,9 @@ export function JsonLd() {
             "@type": "Service",
             name: "Denizli PPF Kaplama",
             serviceType: "Propel 190 mikron boya koruma filmi (PPF)",
+            areaServed: { "@type": "City", name: "Denizli" },
+            provider: { "@id": businessId },
+            url: `${site.domain}/#hizmetler`,
           },
         },
         {
@@ -88,10 +127,36 @@ export function JsonLd() {
             "@type": "Service",
             name: "Seramik kaplama",
             serviceType: "Seramik kaplama",
+            areaServed: { "@type": "City", name: "Denizli" },
+            provider: { "@id": businessId },
           },
         },
       ],
     },
+  };
+
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": websiteId,
+    url: site.domain,
+    name: "Denizli Göçük ve PPF | Inside",
+    alternateName: ["denizlippf.com", "Inside Denizli"],
+    inLanguage: "tr-TR",
+    publisher: { "@id": businessId },
+  };
+
+  const crumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Denizli Göçük ve PPF",
+        item: site.domain,
+      },
+    ],
   };
 
   const faq = {
@@ -109,6 +174,14 @@ export function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(local) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
       />
       <script
         type="application/ld+json"

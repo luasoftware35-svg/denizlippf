@@ -7,16 +7,16 @@ import { Shot } from "./Shot";
 
 const cards = [
   {
-    title: "Göçük Düzeltme",
+    title: "Denizli Göçük",
     image: "/images/shot-detail.jpg",
-    alt: "Inside Denizli boyasız göçük düzeltme",
+    alt: "Denizli boyasız göçük düzeltme — Inside PDR",
     href: "#iletisim",
     cat: "gocuk",
   },
   {
-    title: "Propel PPF",
+    title: "Denizli PPF",
     image: "/images/shot-wrap.jpg",
-    alt: "Inside Denizli PPF kaplama atölyesi",
+    alt: "Denizli PPF kaplama — Propel 190 mikron, Inside",
     href: "#iletisim",
     cat: "ppf",
   },
@@ -52,7 +52,7 @@ export function Services() {
       <div className="mx-auto max-w-[1200px] px-5 sm:px-6 lg:px-10">
         <Reveal>
           <h2 className="text-center text-[2rem] font-medium tracking-tight sm:text-4xl md:text-5xl">
-            Hizmetler
+            Denizli göçük ve PPF hizmetleri
           </h2>
           <div className="-mx-5 mt-8 flex justify-center gap-6 overflow-x-auto px-5 text-[15px] sm:gap-8">
             {tabs.map((t) => (

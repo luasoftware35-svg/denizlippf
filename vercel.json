@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.denizlippf.com" }],
+      "destination": "https://denizlippf.com/:path*",
+      "permanent": true
+    }
+  ]
+}

@@ -39,11 +39,11 @@ export function Contact() {
       <div className="mx-auto grid max-w-[1100px] gap-10 px-5 sm:px-6 md:grid-cols-2 md:gap-16 lg:px-10">
         <Reveal from="left">
           <h2 className="text-[1.85rem] font-medium tracking-tight sm:text-4xl md:text-5xl">
-            Bizden haberdar olun
+            Denizli göçük ve PPF randevu
           </h2>
           <p className="mt-5 max-w-md text-[15px] leading-8 text-muted">
             WhatsApp’tan göçük veya kaplama istediğiniz paneli gönderin.
-            Denizli göçük ve PPF için aynı gün dönüş.
+            Denizli göçük düzeltme ve Denizli PPF için aynı gün dönüş.
           </p>
           <p className="mt-4 text-[14px] text-gold">
             Google {site.rating} · {site.reviewCount} yorum

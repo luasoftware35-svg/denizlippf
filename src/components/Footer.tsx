@@ -18,8 +18,8 @@ export function Footer() {
             />
           </Link>
           <p className="mt-5 max-w-xs text-[14px] leading-7 text-muted">
-            Denizli göçük düzeltme, boyasız göçük ve PPF kaplama. 2017’den beri
-            Merkezefendi’de.
+            Denizli göçük düzeltme, boyasız göçük (PDR) ve Denizli PPF kaplama.
+            2017’den beri Merkezefendi Akçeşme’de.
           </p>
         </div>
         <div>

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Inside — Denizli Göçük Düzeltme ve PPF";
+export const alt = "Denizli göçük düzeltme ve Denizli PPF kaplama — Inside";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

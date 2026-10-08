@@ -9,6 +9,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly",
       priority: 1,
+      images: [
+        `${site.domain}/images/shot-shop.jpg`,
+        `${site.domain}/images/shot-detail.jpg`,
+        `${site.domain}/images/shot-wrap.jpg`,
+      ],
     },
     ...legalNav.map((item) => ({
       url: `${site.domain}${item.href}`,

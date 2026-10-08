@@ -34,10 +34,10 @@ export function Gallery() {
       <div className="mx-auto max-w-[1200px] px-5 sm:px-6 lg:px-10">
         <Reveal>
           <p className="text-center text-[12px] tracking-[0.32em] text-gold uppercase">
-            Atölye
+            Denizli atölye
           </p>
           <h2 className="mt-4 text-center text-[1.85rem] font-medium tracking-tight sm:text-4xl md:text-5xl">
-            Film görünmez, iş görünür.
+            Denizli göçük ve PPF işleri
           </h2>
         </Reveal>
         <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-4 lg:grid-cols-3">

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
 import { CookieConsent } from "@/components/CookieConsent";
+import { seo } from "@/lib/seo";
 import { site } from "@/data/site";
 import "./globals.css";
 
@@ -9,53 +10,52 @@ const outfit = Outfit({
   subsets: ["latin", "latin-ext"],
 });
 
-const title = "Denizli Göçük Düzeltme ve PPF | Inside PDR-PPF";
-const description =
-  "Inside — Denizli göçük düzeltme ve Denizli PPF kaplama. Propel 190 mikron, 7 yıl garanti. 2017’den beri Merkezefendi Akçeşme’de boyasız göçük, şeffaf boya koruma filmi ve seramik kaplama.";
-
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
   title: {
-    default: title,
-    template: "%s | Inside PDR-PPF",
+    default: seo.title,
+    template: "%s | Inside",
   },
-  description,
-  keywords: [
-    "denizli göçük",
-    "denizli göçük düzeltme",
-    "denizli boyasız göçük düzeltme",
-    "denizli ppf",
-    "denizli ppf kaplama",
-    "denizli boya koruma filmi",
-    "pamukkale göçük",
-    "merkezefendi ppf",
-    "boyasız göçük düzeltme denizli",
-    "inside ppf denizli",
-    "inside pdr denizli",
-    "merkezefendi göçük",
-  ],
-  authors: [{ name: site.name, url: site.domain }],
-  creator: site.name,
+  description: seo.description,
+  keywords: [...seo.keywords],
+  applicationName: "Inside Denizli Göçük ve PPF",
+  authors: [{ name: site.legalName, url: site.domain }],
+  creator: site.legalName,
+  publisher: site.legalName,
+  category: "Otomotiv",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "tr_TR",
     url: site.domain,
-    siteName: site.name,
-    title,
-    description,
+    siteName: "Inside Denizli Göçük ve PPF",
+    title: seo.title,
+    description: seo.description,
   },
   twitter: {
     card: "summary_large_image",
-    title,
-    description,
+    title: seo.title,
+    description: seo.description,
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: "/favicon.svg", apple: "/images/favicon.png" },
+  formatDetection: { telephone: true, address: true, email: true },
+  other: {
+    "geo.region": "TR-20",
+    "geo.placename": "Denizli",
+    "geo.position": `${site.geo.lat};${site.geo.lng}`,
+    ICBM: `${site.geo.lat}, ${site.geo.lng}`,
+  },
 };
 
 export const viewport: Viewport = {

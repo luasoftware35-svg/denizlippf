@@ -11,7 +11,7 @@ export function Why() {
             <div className="grid grid-cols-2 gap-3 lg:block">
               <Shot
                 src="/images/shot-wrap.jpg"
-                alt="Inside PPF atölyesi, Merkezefendi"
+                alt="Denizli PPF kaplama atölyesi — Inside Merkezefendi"
                 sizes="(max-width: 1024px) 50vw, 50vw"
               />
               <Shot
@@ -24,7 +24,10 @@ export function Why() {
           </Reveal>
 
           <Reveal delay={0.08} from="right">
-            <p className="max-w-lg text-[15px] leading-8 text-muted">
+            <h2 className="max-w-lg text-2xl font-medium tracking-tight sm:text-3xl">
+              Denizli göçük düzeltme ve PPF aynı atölyede
+            </h2>
+            <p className="mt-5 max-w-lg text-[15px] leading-8 text-muted">
               Inside PPF-PDR, 2017’den beri Denizli’de araç koruma ve boyasız
               göçük onarımı alanında hizmet veriyor. Merkezefendi Akçeşme’deki
               atölyemizde Propel 190 mikron PPF, boyasız göçük düzeltme (PDR)

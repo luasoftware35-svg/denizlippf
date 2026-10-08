@@ -10,7 +10,7 @@ export function Hero() {
       <div className="hero-bleed pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] overflow-hidden lg:block">
         <Image
           src="/images/shop.jpg"
-          alt="Inside Denizli PPF-PDR atölyesi"
+          alt="Inside Denizli göçük düzeltme ve PPF atölyesi, Merkezefendi"
           fill
           priority
           sizes="42vw"
@@ -20,18 +20,14 @@ export function Hero() {
 
       <div className="relative mx-auto grid w-full max-w-[1400px] flex-none lg:min-h-[100svh] lg:grid-cols-[1.16fr_0.84fr]">
         <div className="flex shrink-0 flex-col items-center justify-center px-5 pb-5 pt-20 text-center sm:px-6 sm:pb-8 sm:pt-24 lg:px-16 lg:pb-10 lg:pt-8">
-          <h1
-            className="hero-in text-[clamp(2.15rem,10.5vw,4.25rem)] font-semibold leading-[1.08] tracking-[0.12em] text-paper sm:tracking-[0.18em]"
-            style={{ animationDelay: "0.08s" }}
-          >
-            INSIDE
+          <h1 className="hero-in" style={{ animationDelay: "0.08s" }}>
+            <span className="block text-[clamp(2.15rem,10.5vw,4.25rem)] font-semibold leading-[1.08] tracking-[0.12em] text-paper sm:tracking-[0.18em]">
+              INSIDE
+            </span>
+            <span className="mt-3 block text-[18px] font-light tracking-wide text-[#8a8a8a] sm:text-[28px]">
+              Denizli Göçük Düzeltme ve PPF
+            </span>
           </h1>
-          <p
-            className="hero-in mt-3 text-[18px] font-light tracking-wide text-[#8a8a8a] sm:text-[28px]"
-            style={{ animationDelay: "0.2s" }}
-          >
-            Denizli Göçük &amp; PPF
-          </p>
           <p
             className="hero-in mt-5 max-w-md text-[14px] leading-7 text-muted sm:mt-6"
             style={{ animationDelay: "0.34s" }}
@@ -63,7 +59,7 @@ export function Hero() {
             <div className="relative aspect-[4/5]">
               <Image
                 src="/images/shot-detail.jpg"
-                alt="Inside boyasız göçük düzeltme"
+                alt="Denizli boyasız göçük düzeltme — Inside PDR"
                 fill
                 sizes="340px"
                 className="object-cover object-[center_40%]"
@@ -76,7 +72,7 @@ export function Hero() {
       <div className="hero-bleed relative min-h-0 w-full flex-1 overflow-hidden lg:hidden">
         <Image
           src="/images/shop.jpg"
-          alt="Inside Denizli PPF-PDR atölyesi"
+          alt="Inside Denizli göçük düzeltme ve PPF atölyesi, Merkezefendi"
           fill
           priority
           sizes="100vw"

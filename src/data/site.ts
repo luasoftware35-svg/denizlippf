@@ -153,6 +153,10 @@ export const faqs = [
     a: "Tek bir park göçüğü çoğu zaman aynı gün biter. Dolu hasarı ve tam ön PPF bir–üç gün sürebilir. Tam araç PPF’de film oturması ve kenar kontrolü için randevu planlanır. Teslim saatini keşifte konuşuruz.",
   },
   {
+    q: "Denizli göçük düzeltme nerede yapılır?",
+    a: "Inside atölyesi Merkezefendi Akçeşme’de, Zafer Caddesi No:145/A, 9. Noter arkasında. Denizli göçük düzeltme ve Denizli PPF için randevuyla çalışıyoruz; Pamukkale, Servergazi, Çivril ve Acıpayam’dan da araç geliyor.",
+  },
+  {
     q: "Hangi bölgelere hizmet veriyorsunuz?",
     a: "Atölyemiz Merkezefendi Akçeşme’de, 9. Noter arkasında. Pazartesi–Cumartesi 08:00–19:30, Pazar kapalı. Denizli merkez, Pamukkale, Merkezefendi, Servergazi, Çivril, Acıpayam ve çevre ilçeler. Denizli göçük ve Denizli PPF arayan herkes için randevuyla çalışıyoruz.",
   },
