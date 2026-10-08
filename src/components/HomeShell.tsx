@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Contact } from "@/components/Contact";
 import { Copy } from "@/components/Copy";
 import { Faq } from "@/components/Faq";
@@ -11,7 +12,7 @@ import { Services } from "@/components/Services";
 import { WhatsApp } from "@/components/WhatsApp";
 import { Why } from "@/components/Why";
 
-export default function Home() {
+export function HomeShell({ children }: { children?: ReactNode }) {
   return (
     <>
       <JsonLd />
@@ -26,6 +27,7 @@ export default function Home() {
         <Faq />
         <Contact />
       </main>
+      {children}
       <Footer />
       <WhatsApp />
     </>

@@ -42,14 +42,15 @@ export function Hero() {
             2017’den beri Denizli’de boyasız göçük düzeltme ve Propel 190 mikron
             PPF. 7 yıl garanti ayrıcalığıyla.
           </p>
-          <a
-            href="#hizmetler"
+          <Link
+            href="/hizmetler"
+            scroll={false}
             className="ghost-btn hero-in mt-8 sm:mt-9"
             style={{ animationDelay: "0.48s" }}
           >
             Şimdi Keşfet
             <span aria-hidden>→</span>
-          </a>
+          </Link>
           <p
             className="hero-in mt-5 text-[13px] tracking-wide text-muted sm:mt-6"
             style={{ animationDelay: "0.62s" }}
@@ -71,14 +72,15 @@ export function Hero() {
           >
             Google {site.rating} · {site.reviewCount} yorum
           </a>
-          <a
-            href="#hakkimizda"
+          <Link
+            href="/hakkimizda"
+            scroll={false}
             className="scroll-cue hero-in mt-8 flex lg:hidden"
             style={{ animationDelay: "1.05s" }}
           >
             Kaydır
             <span className="scroll-cue-line" aria-hidden />
-          </a>
+          </Link>
         </div>
 
         <div className="relative hidden lg:block">
@@ -107,14 +109,15 @@ export function Hero() {
         />
       </div>
 
-      <a
-        href="#hakkimizda"
+      <Link
+        href="/hakkimizda"
+        scroll={false}
         className="scroll-cue hero-in absolute bottom-8 left-[29%] z-20 hidden -translate-x-1/2 lg:flex"
         style={{ animationDelay: "1.05s" }}
       >
         Kaydır
         <span className="scroll-cue-line" aria-hidden />
-      </a>
+      </Link>
     </section>
   );
 }

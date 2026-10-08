@@ -25,14 +25,14 @@ const cards = [
     title: extras[0].title,
     image: "/images/frame-bmw.jpg",
     alt: "Inside tam ön PPF uygulaması",
-    href: "#iletisim",
+    href: "/iletisim",
     cat: "ppf",
   },
   {
     title: extras[1].title,
     image: "/images/frame-volvo.jpg",
     alt: "Inside tam araç PPF ve göçük onarımı",
-    href: "#iletisim",
+    href: "/iletisim",
     cat: "koruma",
   },
 ];
@@ -93,10 +93,10 @@ export function Services() {
 
         <Reveal>
           <div className="mt-12 text-center">
-            <a href="#iletisim" className="ghost-btn">
+            <Link href="/iletisim" scroll={false} className="ghost-btn">
               Keşif Alın
               <span aria-hidden>→</span>
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

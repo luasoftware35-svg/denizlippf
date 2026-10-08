@@ -74,7 +74,7 @@ export function Footer() {
               ))}
               {nav.map((item) => (
                 <li key={item.href}>
-                  <Link href={`/${item.href}`} className="foot-link">
+                  <Link href={item.href} className="foot-link">
                     {item.label}
                   </Link>
                 </li>

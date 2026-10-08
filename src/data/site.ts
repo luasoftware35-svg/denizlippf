@@ -27,11 +27,52 @@ export const site = {
 } as const;
 
 export const nav = [
-  { href: "#hakkimizda", label: "Hakkımızda" },
-  { href: "#hizmetler", label: "Hizmetler" },
-  { href: "#sss", label: "SSS" },
-  { href: "#iletisim", label: "İletişim" },
+  {
+    href: "/hakkimizda",
+    id: "hakkimizda",
+    label: "Hakkımızda",
+    title: "Hakkımızda",
+    description:
+      "Inside PPF-PDR Denizli — 2017’den beri Merkezefendi’de boyasız göçük düzeltme ve Propel 190 mikron PPF.",
+  },
+  {
+    href: "/hizmetler",
+    id: "hizmetler",
+    label: "Hizmetler",
+    title: "Hizmetler",
+    description:
+      "Denizli göçük düzeltme, Denizli PPF kaplama, tam ön ve tam araç koruma. Inside Merkezefendi.",
+  },
+  {
+    href: "/sss",
+    id: "sss",
+    label: "SSS",
+    title: "Sık sorulan sorular",
+    description:
+      "Denizli göçük, denizli gocuk ve Denizli PPF hakkında sık sorulan sorular. Inside PPF-PDR.",
+  },
+  {
+    href: "/iletisim",
+    id: "iletisim",
+    label: "İletişim",
+    title: "İletişim",
+    description:
+      "Denizli göçük ve PPF randevu. Inside — Akçeşme, Merkezefendi. 0 536 270 07 95.",
+  },
 ] as const;
+
+export const homeNav = [
+  { href: "/", id: "ust", label: "Anasayfa" },
+  ...nav,
+] as const;
+
+export const hashRoutes: Record<string, string> = {
+  ust: "/",
+  hakkimizda: "/hakkimizda",
+  hizmetler: "/hizmetler",
+  sss: "/sss",
+  iletisim: "/iletisim",
+};
 
 export const legalNav = [
   { href: "/kvkk", label: "KVKK" },

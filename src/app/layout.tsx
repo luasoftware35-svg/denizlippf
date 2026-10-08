@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
 import { CookieConsent } from "@/components/CookieConsent";
+import { HashRedirect } from "@/components/HashRedirect";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { googleSiteVerification } from "@/lib/analytics";
 import { seo } from "@/lib/seo";
@@ -78,6 +79,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full bg-white font-sans text-paper">
         <ScrollProgress />
+        <HashRedirect />
         {children}
         <CookieConsent />
         <Analytics />

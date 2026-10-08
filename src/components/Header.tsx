@@ -2,15 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { nav, site, waLink } from "@/data/site";
-
-const items = [{ href: "#ust", label: "Anasayfa" }, ...nav];
+import { homeNav, site, waLink } from "@/data/site";
 
 export function Header({ overlay = false }: { overlay?: boolean }) {
+  const pathname = usePathname();
   const [solid, setSolid] = useState(!overlay);
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("#ust");
+  const [active, setActive] = useState(pathname);
+
+  useEffect(() => {
+    setActive(pathname);
+  }, [pathname]);
 
   useEffect(() => {
     if (!overlay) return;
@@ -22,18 +26,20 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
 
   useEffect(() => {
     if (!overlay) return;
-    const ids = items.map((item) => item.href.slice(1));
     const io = new IntersectionObserver(
       (entries) => {
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible?.target.id) setActive(`#${visible.target.id}`);
+        const id = visible?.target.id;
+        if (!id) return;
+        const href = homeNav.find((item) => item.id === id)?.href;
+        if (href) setActive(href);
       },
       { rootMargin: "-28% 0px -58% 0px", threshold: [0.1, 0.25, 0.5] },
     );
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
+    homeNav.forEach((item) => {
+      const el = document.getElementById(item.id);
       if (el) io.observe(el);
     });
     return () => io.disconnect();
@@ -45,6 +51,8 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  const current = overlay ? active : pathname;
 
   return (
     <header
@@ -67,23 +75,21 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
         </Link>
 
         <nav className="ml-auto hidden items-center gap-7 pr-6 lg:flex">
-          {items.map((item) => {
-            const href = overlay ? item.href : `/${item.href}`;
-            return (
-              <Link
-                key={item.href}
-                href={href}
-                onClick={() => setActive(item.href)}
-                className={`nav-link text-[15px] transition-colors ${
-                  overlay && active === item.href
-                    ? "is-active font-semibold text-paper"
-                    : "text-[#777] hover:text-paper"
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+          {homeNav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              scroll={overlay ? false : undefined}
+              onClick={() => setActive(item.href)}
+              className={`nav-link text-[15px] transition-colors ${
+                current === item.href
+                  ? "is-active font-semibold text-paper"
+                  : "text-[#777] hover:text-paper"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         <button
@@ -106,10 +112,11 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
       {open ? (
         <div className="max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-t border-line bg-white px-5 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] lg:hidden">
           <nav className="flex flex-col gap-5">
-            {items.map((item, i) => (
+            {homeNav.map((item, i) => (
               <Link
                 key={item.href}
-                href={overlay ? item.href : `/${item.href}`}
+                href={item.href}
+                scroll={overlay ? false : undefined}
                 className="hero-in text-2xl"
                 style={{ animationDelay: `${i * 0.05}s` }}
                 onClick={() => {
