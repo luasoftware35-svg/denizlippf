@@ -42,6 +42,12 @@ export const gocukLanding = {
         "Fiyat göçüğün çapına, paneline ve boyanın sağlamlığına göre çıkar. WhatsApp’tan net fotoğraf çoğu zaman yeter; kesin rakam gün ışığında netleşir. Keşif ücretsizdir.",
       ],
     },
+    {
+      heading: "Hangi ilçelerden geliniyor?",
+      body: [
+        "Atölye Merkezefendi Akçeşme’de, Zafer Caddesi No:145/A, 9. Noter arkasında. Pamukkale, Servergazi, Çivril ve Acıpayam’dan araçlar randevuyla gelir. Denizli göçük düzeltme için aynı gün dönüş hedeflenir.",
+      ],
+    },
   ],
   faqs: [
     {
@@ -94,6 +100,12 @@ export const ppfLanding = {
       heading: "Denizli PPF fiyatı ve garanti",
       body: [
         "Fiyat kaplanacak alana göre değişir; tampon ile tam araç aynı kalem değildir. Propel uygulamalarında 7 yıl garanti ayrıcalığı vardır: kabarma, kenar kalkması ve üretim hatası kapsam içindedir. Göçük varsa önce Denizli göçük düzeltme, sonra taze film oturtulur.",
+      ],
+    },
+    {
+      heading: "Denizli PPF nerede uygulanır?",
+      body: [
+        "Film Merkezefendi Akçeşme atölyesinde, tozsuz ortamda kesilir ve yapıştırılır. Pamukkale ve Servergazi’den randevuyla gelinir. Pazartesi–Cumartesi 08:00–19:30, Pazar kapalı.",
       ],
     },
   ],

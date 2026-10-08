@@ -33,8 +33,8 @@ export function JsonLd() {
     address: {
       "@type": "PostalAddress",
       streetAddress: site.streetAddress,
-      addressLocality: "Denizli",
-      addressRegion: "Denizli",
+      addressLocality: site.city,
+      addressRegion: site.region,
       postalCode: site.postalCode,
       addressCountry: "TR",
     },
@@ -70,13 +70,6 @@ export function JsonLd() {
     currenciesAccepted: "TRY",
     paymentAccepted: "Cash, Credit Card",
     foundingDate: String(site.founded),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: String(site.rating),
-      reviewCount: String(site.reviewCount),
-      bestRating: "5",
-      worstRating: "1",
-    },
     sameAs: [site.maps, site.instagramUrl],
     identifier: {
       "@type": "PropertyValue",

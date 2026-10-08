@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { landings } from "@/data/landings";
-import { legalNav, nav, site } from "@/data/site";
+import { legalNav, site } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date("2026-10-08");
@@ -18,12 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `${site.domain}/images/frame-ppf.jpg`,
       ],
     },
-    ...nav.map((item) => ({
-      url: `${site.domain}${item.href}`,
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })),
     ...landings.map((page) => ({
       url: `${site.domain}${page.path}`,
       lastModified,

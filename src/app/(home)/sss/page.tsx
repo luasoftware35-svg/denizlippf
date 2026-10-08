@@ -7,7 +7,8 @@ const item = nav[2];
 export const metadata: Metadata = {
   title: item.title,
   description: item.description,
-  alternates: { canonical: item.href },
+  alternates: { canonical: "/" },
+  robots: { index: false, follow: true },
   openGraph: {
     title: item.title,
     description: item.description,
