@@ -17,7 +17,7 @@ export function Analytics() {
       />
       <script
         dangerouslySetInnerHTML={{
-          __html: `gtag('js',new Date());gtag('config','${gaId}',{anonymize_ip:true});`,
+          __html: `gtag('js', new Date());\ngtag('config', '${gaId}');`,
         }}
       />
     </>
