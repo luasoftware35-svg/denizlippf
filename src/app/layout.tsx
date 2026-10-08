@@ -52,7 +52,13 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  icons: { icon: "/favicon.svg", apple: "/images/favicon.png" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/images/favicon.png",
+  },
   formatDetection: { telephone: true, address: true, email: true },
   ...(googleSiteVerification
     ? { verification: { google: googleSiteVerification } }
