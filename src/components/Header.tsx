@@ -55,7 +55,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
       <div
         className={`flex w-full items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:justify-start lg:px-10 lg:py-4 ${overlay ? "lg:w-[58%]" : ""}`}
       >
-        <Link href="/" className="flex shrink-0 items-center transition-opacity hover:opacity-70">
+        <Link href="/" className="logo-mark flex shrink-0 items-center">
           <Image
             src="/images/logo.png"
             alt="Inside Denizli göçük ve PPF"

@@ -3,6 +3,7 @@ import { site, waLink } from "@/data/site";
 import { Faq } from "./Faq";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { Reveal } from "./Reveal";
 import { Shot } from "./Shot";
 import { WhatsApp } from "./WhatsApp";
 
@@ -28,16 +29,17 @@ export function ServiceLanding({ page }: { page: Landing }) {
         <section className="bg-white pt-28 pb-12 sm:pt-32 sm:pb-16 md:pt-36">
           <div className="mx-auto grid max-w-[1100px] items-center gap-10 px-5 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
             <div>
-              <p className="text-[12px] tracking-[0.32em] text-gold uppercase">
+              <p className="kicker-in text-[12px] tracking-[0.32em] text-gold uppercase">
                 {page.kicker}
               </p>
-              <h1 className="mt-4 text-[1.85rem] font-medium tracking-tight sm:text-4xl md:text-5xl">
+              <h1 className="hero-in mt-4 text-[1.85rem] font-medium tracking-tight sm:text-4xl md:text-5xl">
                 {page.h1}
               </h1>
-              <p className="mt-5 max-w-md text-[15px] leading-8 text-muted">
+              <span className="hero-rule !mx-0" aria-hidden />
+              <p className="hero-in mt-5 max-w-md text-[15px] leading-8 text-muted" style={{ animationDelay: "0.2s" }}>
                 {page.lead}
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="cta-row mt-8 flex flex-wrap gap-3">
                 <a href={waLink(page.wa)} className="gold-btn">
                   WhatsApp keşif
                   <span aria-hidden>→</span>
@@ -56,46 +58,54 @@ export function ServiceLanding({ page }: { page: Landing }) {
                 </Link>
               </p>
             </div>
-            <Shot
-              src={page.image}
-              alt={page.imageAlt}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
+            <Reveal from="clip">
+              <Shot
+                src={page.image}
+                alt={page.imageAlt}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            </Reveal>
           </div>
         </section>
 
         <section className="bg-bg-2 py-16 sm:py-20">
           <div className="mx-auto grid max-w-[1100px] gap-10 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
-            <ul className="space-y-3 text-[15px] text-paper">
-              {page.points.map((p) => (
-                <li key={p} className="border-b border-line pb-3">
-                  {p}
-                </li>
-              ))}
-            </ul>
+            <Reveal>
+              <ul className="space-y-3 text-[15px] text-paper">
+                {page.points.map((p) => (
+                  <li key={p} className="stagger-line border-b border-line pb-3">
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
             <div>
-              {page.sections.map((s) => (
-                <section key={s.heading} className="mb-10 last:mb-0">
-                  <h2 className="text-2xl font-medium tracking-tight">
-                    {s.heading}
-                  </h2>
-                  {s.body.map((p) => (
-                    <p
-                      key={p.slice(0, 40)}
-                      className="mt-4 text-[15px] leading-8 text-muted"
-                    >
-                      {p}
-                    </p>
-                  ))}
-                </section>
+              {page.sections.map((s, i) => (
+                <Reveal key={s.heading} delay={i * 0.1}>
+                  <section className="mb-10 last:mb-0">
+                    <h2 className="text-2xl font-medium tracking-tight">
+                      {s.heading}
+                    </h2>
+                    <span className="rule" aria-hidden />
+                    {s.body.map((p) => (
+                      <p
+                        key={p.slice(0, 40)}
+                        className="mt-4 text-[15px] leading-8 text-muted"
+                      >
+                        {p}
+                      </p>
+                    ))}
+                  </section>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
         <section className="bg-white px-5 py-12 sm:px-6">
-          <div className="mx-auto max-w-[1100px] border border-line px-6 py-8 sm:px-10">
+          <Reveal from="scale">
+          <div className="mx-auto max-w-[1100px] border border-line px-6 py-8 transition-shadow duration-500 hover:shadow-[0_18px_50px_rgba(0,0,0,0.06)] sm:px-10">
             <h2 className="text-xl font-medium tracking-tight">
               Inside — {site.city}/{site.region}
             </h2>
@@ -104,6 +114,7 @@ export function ServiceLanding({ page }: { page: Landing }) {
               {site.reviewCount} yorum.
             </p>
           </div>
+          </Reveal>
         </section>
 
         <Faq items={[...page.faqs]} />

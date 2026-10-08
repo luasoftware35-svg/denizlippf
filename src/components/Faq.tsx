@@ -18,12 +18,13 @@ export function Faq({
           <h2 className="text-center text-[1.85rem] font-medium tracking-tight sm:text-4xl md:text-5xl">
             Sık Sorulan <span className="text-gold">Sorular</span>
           </h2>
+          <span className="rule rule-center" aria-hidden />
         </Reveal>
         <div className="mt-14 divide-y divide-line border-y border-line">
           {items.map((f, i) => {
             const isOpen = open === i;
             return (
-              <div key={f.q} className="py-1">
+              <div key={f.q} className="faq-row py-1">
                 <button
                   type="button"
                   className="flex min-h-12 w-full cursor-pointer items-center justify-between gap-4 py-4 text-left text-[16px] sm:gap-6 sm:py-5 sm:text-lg"
@@ -31,8 +32,11 @@ export function Faq({
                   onClick={() => setOpen(isOpen ? -1 : i)}
                 >
                   {f.q}
-                  <span className="text-muted transition-transform duration-300">
-                    {isOpen ? "–" : "+"}
+                  <span
+                    className={`shrink-0 text-muted transition-transform duration-500 ${isOpen ? "rotate-45" : ""}`}
+                    aria-hidden
+                  >
+                    +
                   </span>
                 </button>
                 <div

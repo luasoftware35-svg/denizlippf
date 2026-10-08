@@ -43,6 +43,7 @@ export function Contact() {
           <h2 className="text-[1.85rem] font-medium tracking-tight sm:text-4xl md:text-5xl">
             Denizli göçük ve PPF randevu
           </h2>
+          <span className="rule" aria-hidden />
           <p className="mt-5 max-w-md text-[15px] leading-8 text-muted">
             WhatsApp’tan göçük veya kaplama istediğiniz paneli gönderin.
             Denizli göçük düzeltme ve Denizli PPF için aynı gün dönüş.
@@ -51,18 +52,18 @@ export function Contact() {
             Google {site.rating} · {site.reviewCount} yorum
           </p>
           <ul className="mt-8 space-y-3 break-words text-[15px] text-paper">
-            <li>
+            <li className="stagger-line">
               <a href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</a>
             </li>
-            <li>
+            <li className="stagger-line">
               <a href={site.maps} target="_blank" rel="noreferrer">
                 {site.address}
               </a>
             </li>
-            <li>
+            <li className="stagger-line">
               <a href={`mailto:${site.email}`}>{site.email}</a>
             </li>
-            <li>
+            <li className="stagger-line">
               <a
                 href={site.instagramUrl}
                 target="_blank"
@@ -71,7 +72,7 @@ export function Contact() {
                 Instagram @{site.instagram}
               </a>
             </li>
-            <li>{site.hours}</li>
+            <li className="stagger-line">{site.hours}</li>
           </ul>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a href={`tel:${site.phoneTel}`} className="gold-btn w-full sm:w-auto">
@@ -93,7 +94,7 @@ export function Contact() {
               <iframe
                 title="Inside PPF-PDR Denizli harita"
                 src={`https://maps.google.com/maps?q=${site.geo.lat},${site.geo.lng}&z=16&output=embed`}
-                className="h-full w-full border-0 grayscale"
+                className="map-in h-full w-full border-0 grayscale"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
@@ -117,7 +118,7 @@ export function Contact() {
         </Reveal>
 
         <Reveal delay={0.1} from="right">
-          <form onSubmit={submit} className="bg-white p-5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] sm:p-8">
+          <form onSubmit={submit} className="form-card bg-white p-5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] sm:p-8">
             <label className="block text-[13px] text-muted">
               Ad soyad
               <input

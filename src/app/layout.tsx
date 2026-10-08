@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
 import { CookieConsent } from "@/components/CookieConsent";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import { googleSiteVerification } from "@/lib/analytics";
 import { seo } from "@/lib/seo";
 import { site } from "@/data/site";
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${outfit.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-white font-sans text-paper">
+        <ScrollProgress />
         {children}
         <CookieConsent />
         <Analytics />

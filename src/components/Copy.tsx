@@ -10,6 +10,7 @@ export function Copy() {
             <Link href="/denizli-gocuk" className="hover:opacity-70">
               Denizli göçük düzeltme
             </Link>
+            <span className="rule" aria-hidden />
           </h2>
           <p className="mt-5 text-[15px] leading-8 text-muted">
             Park ederken kapı izi, market arabası, dolu ve taş darbesi
@@ -23,6 +24,7 @@ export function Copy() {
             <Link href="/denizli-ppf" className="hover:opacity-70">
               Denizli PPF kaplama
             </Link>
+            <span className="rule" aria-hidden />
           </h2>
           <p className="mt-5 text-[15px] leading-8 text-muted">
             Inside’de Propel 190 mikron şeffaf TPU film kullanılır. Tampon,

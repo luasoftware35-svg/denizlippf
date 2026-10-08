@@ -55,15 +55,16 @@ export function Services() {
           <h2 className="text-center text-[2rem] font-medium tracking-tight sm:text-4xl md:text-5xl">
             Denizli göçük ve PPF hizmetleri
           </h2>
+          <span className="rule rule-center" aria-hidden />
           <div className="-mx-5 mt-8 flex justify-center gap-6 overflow-x-auto px-5 text-[15px] sm:gap-8">
             {tabs.map((t) => (
               <button
                 key={t.id}
                 type="button"
                 onClick={() => setTab(t.id)}
-                className={`transition-colors ${
+                className={`tab-link transition-colors ${
                   tab === t.id
-                    ? "font-semibold text-paper"
+                    ? "is-on font-semibold text-paper"
                     : "text-muted hover:text-paper"
                 }`}
               >
@@ -90,12 +91,14 @@ export function Services() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <a href="#iletisim" className="ghost-btn">
-            Keşif Alın
-            <span aria-hidden>→</span>
-          </a>
-        </div>
+        <Reveal>
+          <div className="mt-12 text-center">
+            <a href="#iletisim" className="ghost-btn">
+              Keşif Alın
+              <span aria-hidden>→</span>
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

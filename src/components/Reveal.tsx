@@ -7,6 +7,7 @@ const styles = {
   left: "reveal-left",
   right: "reveal-right",
   scale: "reveal-scale",
+  clip: "reveal-clip",
 } as const;
 
 export function Reveal({
