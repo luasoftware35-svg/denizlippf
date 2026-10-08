@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { extras } from "@/data/site";
 import { Reveal } from "./Reveal";
@@ -10,14 +11,14 @@ const cards = [
     title: "Denizli Göçük",
     image: "/images/shot-detail.jpg",
     alt: "Denizli boyasız göçük düzeltme — Inside PDR",
-    href: "#iletisim",
+    href: "/denizli-gocuk",
     cat: "gocuk",
   },
   {
     title: "Denizli PPF",
     image: "/images/shot-wrap.jpg",
     alt: "Denizli PPF kaplama — Propel 190 mikron, Inside",
-    href: "#iletisim",
+    href: "/denizli-ppf",
     cat: "ppf",
   },
   {
@@ -75,7 +76,7 @@ export function Services() {
         <div className="mt-10 grid grid-cols-2 gap-4 sm:mt-14 sm:gap-8 lg:grid-cols-4">
           {shown.map((c, i) => (
             <Reveal key={`${tab}-${c.title}`} delay={i * 0.06} from="scale">
-              <a href={c.href} className="group block">
+              <Link href={c.href} className="group block">
                 <Shot
                   src={c.image}
                   alt={c.alt}
@@ -84,7 +85,7 @@ export function Services() {
                 <h3 className="mt-3 text-[15px] font-medium transition-transform duration-300 group-hover:translate-x-1 sm:mt-4 sm:text-lg">
                   {c.title}
                 </h3>
-              </a>
+              </Link>
             </Reveal>
           ))}
         </div>

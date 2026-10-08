@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { landings } from "@/data/landings";
 import { legalNav, site } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -15,6 +16,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `${site.domain}/images/shot-wrap.jpg`,
       ],
     },
+    ...landings.map((page) => ({
+      url: `${site.domain}${page.path}`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+      images: [`${site.domain}${page.image}`],
+    })),
     ...legalNav.map((item) => ({
       url: `${site.domain}${item.href}`,
       lastModified,

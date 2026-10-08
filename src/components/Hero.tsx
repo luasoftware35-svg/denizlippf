@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { site } from "@/data/site";
 
 export function Hero() {
@@ -43,12 +44,24 @@ export function Hero() {
             Şimdi Keşfet
             <span aria-hidden>→</span>
           </a>
+          <p
+            className="hero-in mt-5 text-[13px] tracking-wide text-muted sm:mt-6"
+            style={{ animationDelay: "0.62s" }}
+          >
+            <Link href="/denizli-gocuk" className="hover:text-paper">
+              Denizli göçük
+            </Link>
+            <span aria-hidden> · </span>
+            <Link href="/denizli-ppf" className="hover:text-paper">
+              Denizli PPF
+            </Link>
+          </p>
           <a
             href={site.maps}
             target="_blank"
             rel="noreferrer"
-            className="hero-in mt-5 text-[13px] tracking-wide text-muted transition-colors hover:text-paper sm:mt-6"
-            style={{ animationDelay: "0.62s" }}
+            className="hero-in mt-3 text-[13px] tracking-wide text-muted transition-colors hover:text-paper"
+            style={{ animationDelay: "0.7s" }}
           >
             Google {site.rating} · {site.reviewCount} yorum
           </a>

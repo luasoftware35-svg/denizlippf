@@ -107,7 +107,7 @@ export function JsonLd() {
             serviceType: "Boyasız göçük düzeltme (PDR)",
             areaServed: { "@type": "City", name: "Denizli" },
             provider: { "@id": businessId },
-            url: `${site.domain}/#hizmetler`,
+            url: `${site.domain}/denizli-gocuk`,
           },
         },
         {
@@ -118,7 +118,7 @@ export function JsonLd() {
             serviceType: "Propel 190 mikron boya koruma filmi (PPF)",
             areaServed: { "@type": "City", name: "Denizli" },
             provider: { "@id": businessId },
-            url: `${site.domain}/#hizmetler`,
+            url: `${site.domain}/denizli-ppf`,
           },
         },
         {

@@ -161,6 +161,14 @@ export const faqs = [
     a: "Atölyemiz Merkezefendi Akçeşme’de, 9. Noter arkasında. Pazartesi–Cumartesi 08:00–19:30, Pazar kapalı. Denizli merkez, Pamukkale, Merkezefendi, Servergazi, Çivril, Acıpayam ve çevre ilçeler. Denizli göçük ve Denizli PPF arayan herkes için randevuyla çalışıyoruz.",
   },
   {
+    q: "Denizli PPF kaplama nerede yapılır?",
+    a: "Denizli PPF Inside atölyesinde uygulanır: Merkezefendi Akçeşme, Zafer Cd. No:145/A, 9. Noter arkası. Propel 190 mikron, 7 yıl garanti. Randevuyla çalışıyoruz.",
+  },
+  {
+    q: "Denizli gocuk ile denizli göçük aynı mı?",
+    a: "Evet. Denizli gocuk, denizli göçük ve boyasız göçük düzeltme aynı hizmeti tarif eder. Inside’de PDR ile, Merkezefendi’de yapılır.",
+  },
+  {
     q: "Garanti var mı?",
     a: "Propel PPF uygulamalarında 7 yıl garanti ayrıcalığı vardır: kabarma, kenar kalkması ve üretim hatası kapsam içindedir. Boyasız göçük düzeltmede işçilik garantisi verilir. Çarpışma ve yeni darbe ayrı bir iştir; onu da aynı gün bakarız.",
   },

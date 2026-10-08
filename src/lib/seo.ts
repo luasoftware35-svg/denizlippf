@@ -6,6 +6,7 @@ export const seo = {
     "Denizli göçük düzeltme ve Denizli PPF. Inside — Merkezefendi’de boyasız göçük (PDR) ve Propel 190 mikron boya koruma filmi. 7 yıl garanti. 0 536 270 07 95.",
   keywords: [
     "denizli göçük",
+    "denizli gocuk",
     "denizli göçük düzeltme",
     "denizli boyasız göçük",
     "denizli ppf",

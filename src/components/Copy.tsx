@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 
 export function Copy() {
@@ -6,7 +7,9 @@ export function Copy() {
       <div className="mx-auto grid max-w-[1100px] gap-10 px-5 sm:px-6 md:grid-cols-2 md:gap-16 lg:px-10">
         <Reveal from="left">
           <h2 className="text-3xl font-medium tracking-tight">
-            Denizli göçük düzeltme
+            <Link href="/denizli-gocuk" className="hover:opacity-70">
+              Denizli göçük düzeltme
+            </Link>
           </h2>
           <p className="mt-5 text-[15px] leading-8 text-muted">
             Park ederken kapı izi, market arabası, dolu ve taş darbesi
@@ -17,7 +20,9 @@ export function Copy() {
         </Reveal>
         <Reveal delay={0.08} from="right">
           <h2 className="text-3xl font-medium tracking-tight">
-            Denizli PPF kaplama
+            <Link href="/denizli-ppf" className="hover:opacity-70">
+              Denizli PPF kaplama
+            </Link>
           </h2>
           <p className="mt-5 text-[15px] leading-8 text-muted">
             Inside’de Propel 190 mikron şeffaf TPU film kullanılır. Tampon,

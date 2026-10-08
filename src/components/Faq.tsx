@@ -4,7 +4,11 @@ import { useState } from "react";
 import { faqs } from "@/data/site";
 import { Reveal } from "./Reveal";
 
-export function Faq() {
+export function Faq({
+  items = faqs,
+}: {
+  items?: readonly { q: string; a: string }[];
+}) {
   const [open, setOpen] = useState(0);
 
   return (
@@ -16,7 +20,7 @@ export function Faq() {
           </h2>
         </Reveal>
         <div className="mt-14 divide-y divide-line border-y border-line">
-          {faqs.map((f, i) => {
+          {items.map((f, i) => {
             const isOpen = open === i;
             return (
               <div key={f.q} className="py-1">

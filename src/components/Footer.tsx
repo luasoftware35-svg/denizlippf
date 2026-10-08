@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { serviceNav } from "@/data/landings";
 import { legalNav, nav, site, waLink } from "@/data/site";
 import { GenuaPartner } from "./GenuaPartner";
 
@@ -11,7 +12,7 @@ export function Footer() {
           <Link href="/" className="inline-block">
             <Image
               src="/images/logo.png"
-              alt="Inside PDR-PPF"
+              alt="Inside Denizli göçük ve PPF"
               width={160}
               height={42}
               className="h-9 w-auto"
@@ -54,6 +55,11 @@ export function Footer() {
             <li>
               <Link href="/">Anasayfa</Link>
             </li>
+            {serviceNav.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href}>{item.label}</Link>
+              </li>
+            ))}
             {nav.map((item) => (
               <li key={item.href}>
                 <Link href={`/${item.href}`}>{item.label}</Link>

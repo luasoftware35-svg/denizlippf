@@ -58,7 +58,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
         <Link href="/" className="flex shrink-0 items-center transition-opacity hover:opacity-70">
           <Image
             src="/images/logo.png"
-            alt="Inside PDR-PPF"
+            alt="Inside Denizli göçük ve PPF"
             width={180}
             height={47}
             className="h-8 w-auto sm:h-10"
