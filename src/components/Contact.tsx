@@ -39,9 +39,14 @@ export function Contact() {
             WhatsApp’tan göçük veya kaplama istediğiniz paneli gönderin.
             Denizli göçük düzeltme ve Denizli PPF için aynı gün dönüş.
           </p>
-          <p className="mt-4 text-[14px] text-gold">
+          <a
+            href={site.reviews}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-block text-[14px] text-gold hover:text-paper"
+          >
             Google {site.rating} · {site.reviewCount} yorum
-          </p>
+          </a>
           <ul className="mt-8 space-y-3 break-words text-[15px] text-paper">
             <li className="stagger-line">
               <a href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</a>

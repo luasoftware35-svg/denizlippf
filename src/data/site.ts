@@ -13,6 +13,8 @@ export const site = {
   ppfSpec: "190 mikron",
   ppfWarranty: "7 yıl",
   maps: "https://www.google.com/maps/place/%C4%B0nside+PPF-PDR+Denizli/@37.8123886,29.0667526,17z",
+  reviews:
+    "https://www.google.com/maps/place/%C4%B0nside+PPF-PDR+Denizli/@37.8123886,29.0667526,17z/data=!4m8!3m7!1s0x14c73fc5464a27e7:0x96f17860c0edc28!8m2!3d37.8123886!4d29.0667526!9m1!1b1",
   address: "Akçeşme Mah. Zafer Cd. No:145/A, 9. Noter arkası, 20020 Merkezefendi/Denizli",
   streetAddress: "Akçeşme Mahallesi Zafer Caddesi No:145/A",
   postalCode: "20020",

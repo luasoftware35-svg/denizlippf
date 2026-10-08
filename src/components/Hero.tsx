@@ -64,7 +64,7 @@ export function Hero() {
             </Link>
           </p>
           <a
-            href={site.maps}
+            href={site.reviews}
             target="_blank"
             rel="noreferrer"
             className="hero-in mt-3 text-[13px] tracking-wide text-muted transition-colors hover:text-paper"

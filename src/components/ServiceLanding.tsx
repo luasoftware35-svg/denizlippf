@@ -110,8 +110,16 @@ export function ServiceLanding({ page }: { page: Landing }) {
               Inside — {site.city}/{site.region}
             </h2>
             <p className="mt-3 max-w-2xl text-[15px] leading-8 text-muted">
-              {site.address}. {site.hours}. Google {site.rating} ·{" "}
-              {site.reviewCount} yorum.
+              {site.address}. {site.hours}.{" "}
+              <a
+                href={site.reviews}
+                target="_blank"
+                rel="noreferrer"
+                className="text-paper hover:opacity-70"
+              >
+                Google {site.rating} · {site.reviewCount} yorum
+              </a>
+              .
             </p>
           </div>
           </Reveal>
