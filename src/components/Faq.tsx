@@ -31,7 +31,7 @@ export function Faq({
                   aria-expanded={isOpen}
                   onClick={() => setOpen(isOpen ? -1 : i)}
                 >
-                  {f.q}
+                  <span className="min-w-0 flex-1">{f.q}</span>
                   <span
                     className={`shrink-0 text-muted transition-transform duration-500 ${isOpen ? "rotate-45" : ""}`}
                     aria-hidden

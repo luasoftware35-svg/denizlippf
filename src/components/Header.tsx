@@ -118,7 +118,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
                 key={item.href}
                 href={item.href}
                 scroll={overlay ? false : undefined}
-                className="hero-in text-2xl"
+                className="hero-in flex min-h-11 items-center text-2xl"
                 style={{ animationDelay: `${i * 0.05}s` }}
                 onClick={() => {
                   setActive(item.href);

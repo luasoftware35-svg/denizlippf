@@ -66,7 +66,7 @@ export function Services() {
                 key={t.id}
                 type="button"
                 onClick={() => setTab(t.id)}
-                className={`tab-link transition-colors ${
+                className={`tab-link inline-flex min-h-11 items-center transition-colors ${
                   tab === t.id
                     ? "is-on font-semibold text-paper"
                     : "text-muted hover:text-paper"

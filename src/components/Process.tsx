@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 export function Process() {
   return (
     <section id="surec" className="border-y border-line bg-bg-2 py-12 sm:py-16 md:py-20">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-2 gap-x-4 gap-y-8 px-5 sm:gap-10 sm:px-6 lg:grid-cols-4 lg:px-10">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-y-8 px-5 sm:grid-cols-2 sm:gap-10 sm:px-6 lg:grid-cols-4 lg:px-10">
         {extras.map((e, i) => (
           <Reveal key={e.title} delay={i * 0.07}>
             <article className="process-card text-center">

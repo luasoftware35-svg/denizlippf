@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="ust"
-      className="relative flex h-[100svh] flex-col overflow-hidden bg-white lg:block lg:h-auto lg:min-h-[100svh]"
+      className="relative flex min-h-[100svh] flex-col overflow-hidden bg-white lg:block lg:h-auto lg:min-h-[100svh]"
     >
       <div className="hero-bleed pointer-events-none absolute inset-y-[7%] right-0 hidden w-[34%] overflow-hidden lg:block">
         <Parallax className="absolute inset-0" strength={0.06}>
@@ -98,7 +98,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="hero-bleed relative min-h-0 w-full flex-1 overflow-hidden lg:hidden">
+      <div className="hero-bleed relative min-h-[240px] w-full flex-1 overflow-hidden lg:hidden">
         <Image
           src="/images/frame-inside-hero.jpg"
           alt="Inside PDR-PPF atölyesi, Merkezefendi Denizli"

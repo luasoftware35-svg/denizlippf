@@ -41,12 +41,12 @@ export function ServiceLanding({ page }: { page: Landing }) {
               <p className="hero-in mt-5 max-w-md text-[15px] leading-8 text-muted" style={{ animationDelay: "0.2s" }}>
                 {page.lead}
               </p>
-              <div className="cta-row mt-8 flex flex-wrap gap-3">
-                <a href={waLink(page.wa)} className="gold-btn">
+              <div className="cta-row mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a href={waLink(page.wa)} className="gold-btn w-full sm:w-auto">
                   WhatsApp keşif
                   <span aria-hidden>→</span>
                 </a>
-                <a href={`tel:${site.phoneTel}`} className="ghost-btn">
+                <a href={`tel:${site.phoneTel}`} className="ghost-btn w-full sm:w-auto">
                   {site.phoneDisplay}
                 </a>
               </div>
