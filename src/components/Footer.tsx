@@ -3,6 +3,7 @@ import Link from "next/link";
 import { serviceNav } from "@/data/landings";
 import { legalNav, nav, site, waLink } from "@/data/site";
 import { GenuaPartner } from "./GenuaPartner";
+import { HoursLine } from "./HoursLine";
 import { InstagramLink } from "./InstagramLink";
 import { Reveal } from "./Reveal";
 
@@ -54,7 +55,9 @@ export function Footer() {
                   @{site.instagram}
                 </a>
               </li>
-              <li>{site.hours}</li>
+              <li>
+                <HoursLine />
+              </li>
             </ul>
           </div>
           <div>

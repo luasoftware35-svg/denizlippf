@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { track } from "@/lib/analytics";
 import { site, waLink } from "@/data/site";
+import { HoursLine } from "./HoursLine";
 import { Reveal } from "./Reveal";
 
 export function Contact() {
@@ -11,6 +12,8 @@ export function Contact() {
   const [phone, setPhone] = useState("");
   const [service, setService] = useState("Göçük düzeltme");
   const [note, setNote] = useState("");
+  const [notice, setNotice] = useState<"sent" | "blocked" | null>(null);
+  const [draftHref, setDraftHref] = useState("");
 
   function submit(e: FormEvent) {
     e.preventDefault();
@@ -23,8 +26,16 @@ export function Contact() {
     ]
       .filter(Boolean)
       .join("\n");
+    const href = waLink(text);
+    setDraftHref(href);
     track("generate_lead", { method: "whatsapp_form", service });
-    window.open(waLink(text), "_blank", "noopener,noreferrer");
+    const popup = window.open(href, "_blank");
+    if (popup) {
+      popup.opener = null;
+      setNotice("sent");
+      return;
+    }
+    setNotice("blocked");
   }
 
   return (
@@ -68,7 +79,9 @@ export function Contact() {
                 Instagram @{site.instagram}
               </a>
             </li>
-            <li className="stagger-line">{site.hours}</li>
+            <li className="stagger-line">
+              <HoursLine />
+            </li>
           </ul>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a href={`tel:${site.phoneTel}`} className="gold-btn w-full sm:w-auto">
@@ -161,6 +174,20 @@ export function Contact() {
               WhatsApp’tan gönder
               <span aria-hidden>→</span>
             </button>
+            <p className="mt-4 min-h-6 text-[13px] leading-6 text-muted" aria-live="polite">
+              {notice === "sent"
+                ? "WhatsApp açıldı. Mesaj taslağı hazır; göndermek için sohbette onaylayın."
+                : null}
+              {notice === "blocked" ? (
+                <>
+                  Pencere engellendi.{" "}
+                  <a href={draftHref} target="_blank" rel="noreferrer" className="text-paper underline-offset-2 hover:underline">
+                    WhatsApp’ı buradan açın
+                  </a>
+                  .
+                </>
+              ) : null}
+            </p>
           </form>
         </Reveal>
       </div>

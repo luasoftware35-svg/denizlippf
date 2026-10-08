@@ -1,3 +1,7 @@
+"use client";
+
+import { useCallback, useState } from "react";
+import { Lightbox } from "./Lightbox";
 import { Reveal } from "./Reveal";
 import { Shot } from "./Shot";
 
@@ -37,6 +41,9 @@ const shots = [
 ];
 
 export function Gallery() {
+  const [index, setIndex] = useState<number | null>(null);
+  const close = useCallback(() => setIndex(null), []);
+
   return (
     <section id="atolye" className="bg-white py-16 sm:py-20 md:py-28">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-6 lg:px-10">
@@ -50,13 +57,23 @@ export function Gallery() {
           <span className="rule rule-center" aria-hidden />
         </Reveal>
         <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-4 lg:grid-cols-3">
-          {shots.map((s, i) => (
-            <Reveal key={s.src} delay={i * 0.07} from="clip">
-              <Shot src={s.src} alt={s.alt} sizes="(max-width: 1024px) 50vw, 33vw" />
+          {shots.map((shot, i) => (
+            <Reveal key={shot.src} delay={i * 0.07} from="clip">
+              <button
+                type="button"
+                className="block w-full cursor-zoom-in text-left"
+                aria-label={`${shot.alt}. Büyüt`}
+                onClick={() => setIndex(i)}
+              >
+                <Shot src={shot.src} alt={shot.alt} sizes="(max-width: 1024px) 50vw, 33vw" />
+              </button>
             </Reveal>
           ))}
         </div>
       </div>
+      {index !== null ? (
+        <Lightbox images={shots} index={index} onClose={close} onIndex={setIndex} />
+      ) : null}
     </section>
   );
 }

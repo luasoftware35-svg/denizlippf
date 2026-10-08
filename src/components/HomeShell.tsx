@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { BeforeAfter } from "@/components/BeforeAfter";
 import { Contact } from "@/components/Contact";
 import { Copy } from "@/components/Copy";
 import { Faq } from "@/components/Faq";
@@ -8,6 +9,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { JsonLd } from "@/components/JsonLd";
 import { Process } from "@/components/Process";
+import { Reviews } from "@/components/Reviews";
 import { Services } from "@/components/Services";
 import { WhatsApp } from "@/components/WhatsApp";
 import { Why } from "@/components/Why";
@@ -20,10 +22,12 @@ export function HomeShell({ children }: { children?: ReactNode }) {
       <main>
         <Hero />
         <Why />
+        <BeforeAfter />
         <Services />
         <Process />
         <Gallery />
         <Copy />
+        <Reviews />
         <Faq />
         <Contact />
       </main>

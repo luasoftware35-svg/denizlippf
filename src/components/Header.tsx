@@ -3,26 +3,27 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { homeNav, site, waLink } from "@/data/site";
+
+function subscribeScroll(onStoreChange: () => void) {
+  window.addEventListener("scroll", onStoreChange, { passive: true });
+  return () => window.removeEventListener("scroll", onStoreChange);
+}
 
 export function Header({ overlay = false }: { overlay?: boolean }) {
   const pathname = usePathname();
-  const [solid, setSolid] = useState(!overlay);
+  const solid = useSyncExternalStore(
+    subscribeScroll,
+    () => !overlay || window.scrollY > 12,
+    () => !overlay,
+  );
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(pathname);
 
   useEffect(() => {
     setActive(pathname);
   }, [pathname]);
-
-  useEffect(() => {
-    if (!overlay) return;
-    const onScroll = () => setSolid(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [overlay]);
 
   useEffect(() => {
     if (!overlay) return;
@@ -56,7 +57,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
 
   return (
     <header
-      className={`header-in fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         solid || open ? "bg-white/95 backdrop-blur-md" : "bg-transparent"
       }`}
     >

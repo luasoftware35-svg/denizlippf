@@ -9,6 +9,7 @@ import { Shot } from "./Shot";
 const cards = [
   {
     title: "Denizli Göçük",
+    line: "Boyasız düzeltme. Park, dolu ve kapı izi; orijinal boya kalır.",
     image: "/images/frame-pdr.jpg",
     alt: "Denizli boyasız göçük düzeltme — Inside PDR",
     href: "/denizli-gocuk",
@@ -16,6 +17,7 @@ const cards = [
   },
   {
     title: "Denizli PPF kaplama",
+    line: "Şeffaf Propel 190 mikron film. Taş ve çizik için, 7 yıl garanti.",
     image: "/images/frame-ppf.jpg",
     alt: "Denizli PPF kaplama — Propel 190 mikron, Inside",
     href: "/denizli-ppf",
@@ -23,6 +25,7 @@ const cards = [
   },
   {
     title: extras[0].title,
+    line: "Kaput, çamurluk, tampon ve aynalar. 7 yıl garanti.",
     image: "/images/frame-bmw.jpg",
     alt: "Inside tam ön PPF uygulaması",
     href: "/denizli-ppf",
@@ -30,6 +33,7 @@ const cards = [
   },
   {
     title: extras[1].title,
+    line: "Yeni teslim ve yüksek değerli araçlarda tam koruma.",
     image: "/images/frame-volvo.jpg",
     alt: "Inside tam araç PPF ve göçük onarımı",
     href: "/denizli-ppf",
@@ -86,6 +90,7 @@ export function Services() {
                 <h3 className="mt-3 text-[15px] font-medium transition-transform duration-300 group-hover:translate-x-1 sm:mt-4 sm:text-lg">
                   {c.title}
                 </h3>
+                <p className="mt-1 text-[13px] leading-5 text-muted">{c.line}</p>
               </Link>
             </Reveal>
           ))}

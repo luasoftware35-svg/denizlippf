@@ -1,6 +1,6 @@
 import { waLink } from "@/data/site";
 import { Reveal } from "./Reveal";
-import { Shot } from "./Shot";
+import { ZoomPhoto } from "./ZoomPhoto";
 
 export function Why() {
   return (
@@ -9,12 +9,12 @@ export function Why() {
         <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-16">
           <Reveal from="clip">
             <div className="grid grid-cols-2 gap-3 lg:block">
-              <Shot
+              <ZoomPhoto
                 src="/images/frame-inside.jpg"
                 alt="Inside PDR-PPF atölyesi, Merkezefendi Denizli"
                 sizes="(max-width: 1024px) 50vw, 50vw"
               />
-              <Shot
+              <ZoomPhoto
                 src="/images/frame-propel.jpg"
                 alt="Inside Denizli’de Propel 190 mikron PPF uygulaması"
                 sizes="(max-width: 1024px) 50vw, 50vw"
@@ -41,7 +41,7 @@ export function Why() {
             </a>
             <div className="mt-12 hidden lg:block">
               <Reveal from="clip" delay={0.12}>
-                <Shot
+                <ZoomPhoto
                   src="/images/frame-propel.jpg"
                   alt="Inside Denizli’de Propel 190 mikron PPF uygulaması"
                   sizes="(max-width: 1024px) 100vw, 50vw"

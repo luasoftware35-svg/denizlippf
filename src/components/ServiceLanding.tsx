@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { site, waLink } from "@/data/site";
+import { BeforeAfter } from "./BeforeAfter";
 import { Faq } from "./Faq";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { HoursLine } from "./HoursLine";
 import { Reveal } from "./Reveal";
-import { Shot } from "./Shot";
 import { WhatsApp } from "./WhatsApp";
+import { ZoomPhoto } from "./ZoomPhoto";
 
 type Landing = {
   path: string;
@@ -59,7 +61,7 @@ export function ServiceLanding({ page }: { page: Landing }) {
               </p>
             </div>
             <Reveal from="clip">
-              <Shot
+              <ZoomPhoto
                 src={page.image}
                 alt={page.imageAlt}
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -68,6 +70,8 @@ export function ServiceLanding({ page }: { page: Landing }) {
             </Reveal>
           </div>
         </section>
+
+        {page.path === "/denizli-gocuk" ? <BeforeAfter /> : null}
 
         <section className="bg-bg-2 py-16 sm:py-20">
           <div className="mx-auto grid max-w-[1100px] gap-10 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
@@ -110,7 +114,7 @@ export function ServiceLanding({ page }: { page: Landing }) {
               Inside — {site.city}/{site.region}
             </h2>
             <p className="mt-3 max-w-2xl text-[15px] leading-8 text-muted">
-              {site.address}. {site.hours}.{" "}
+              {site.address}. <HoursLine />.{" "}
               <a
                 href={site.reviews}
                 target="_blank"
