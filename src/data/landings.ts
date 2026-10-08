@@ -13,7 +13,7 @@ export const gocukLanding = {
   kicker: "Denizli göçük",
   h1: "Denizli Göçük Düzeltme",
   lead: "Boyasız göçük düzeltme (PDR). Orijinal boya kalır, araç değer kaybetmez. Merkezefendi Akçeşme’de, 2017’den beri.",
-  image: "/images/shot-detail.jpg",
+  image: "/images/frame-pdr.jpg",
   imageAlt: "Denizli göçük düzeltme — Inside boyasız PDR atölyesi",
   wa: "Merhaba, Denizli göçük düzeltme için keşif ve randevu istiyorum.",
   points: [
@@ -68,7 +68,7 @@ export const ppfLanding = {
   kicker: "Denizli PPF",
   h1: "Denizli PPF Kaplama",
   lead: "Propel 190 mikron şeffaf boya koruma filmi. Taş, çizik ve UV’ye karşı. 7 yıl garanti ayrıcalığıyla, Merkezefendi’de.",
-  image: "/images/shot-wrap.jpg",
+  image: "/images/frame-ppf.jpg",
   imageAlt: "Denizli PPF kaplama — Inside Propel 190 mikron uygulama",
   wa: "Merhaba, Denizli PPF kaplama için keşif ve randevu istiyorum.",
   points: [

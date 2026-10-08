@@ -3,27 +3,27 @@ import { Shot } from "./Shot";
 
 const shots = [
   {
-    src: "/images/shot-shop.jpg",
+    src: "/images/frame-shop.jpg",
     alt: "Inside Denizli PPF-PDR atölyesi, Merkezefendi",
   },
   {
-    src: "/images/shot-detail.jpg",
-    alt: "Boyasız göçük düzeltme — Denizli göçük",
+    src: "/images/frame-pdr.jpg",
+    alt: "Denizli boyasız göçük düzeltme kapı detayı — Inside PDR",
   },
   {
-    src: "/images/shot-wrap.jpg",
+    src: "/images/frame-ppf.jpg",
     alt: "Inside PPF kaplama atölyesi",
   },
   {
-    src: "/images/shot-bmw.jpg",
+    src: "/images/frame-bmw.jpg",
     alt: "Inside atölyesinde teslim edilen araç",
   },
   {
-    src: "/images/shot-volvo.jpg",
+    src: "/images/frame-volvo.jpg",
     alt: "Tam araç PPF ve göçük onarımı — Denizli PPF",
   },
   {
-    src: "/images/shot-bay.jpg",
+    src: "/images/frame-bay.jpg",
     alt: "Inside Denizli atölye içi",
   },
 ];

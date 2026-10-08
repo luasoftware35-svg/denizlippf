@@ -10,12 +10,12 @@ export function Why() {
           <Reveal from="left">
             <div className="grid grid-cols-2 gap-3 lg:block">
               <Shot
-                src="/images/shot-wrap.jpg"
+                src="/images/frame-ppf.jpg"
                 alt="Denizli PPF kaplama atölyesi — Inside Merkezefendi"
                 sizes="(max-width: 1024px) 50vw, 50vw"
               />
               <Shot
-                src="/images/shot-bmw.jpg"
+                src="/images/frame-bmw.jpg"
                 alt="Inside atölyesinde teslim edilen araç"
                 sizes="(max-width: 1024px) 50vw, 50vw"
                 className="lg:hidden"
@@ -40,7 +40,7 @@ export function Why() {
             </a>
             <div className="mt-12 hidden lg:block">
               <Shot
-                src="/images/shot-bmw.jpg"
+                src="/images/frame-bmw.jpg"
                 alt="Inside atölyesinde teslim edilen araç"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />

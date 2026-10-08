@@ -14,7 +14,7 @@ export function Shot({
   className?: string;
 }) {
   return (
-    <div className={`group relative aspect-[4/5] overflow-hidden bg-bg-2 ${className}`}>
+    <div className={`shot-frame group relative aspect-[4/5] overflow-hidden bg-bg-2 ${className}`}>
       <Image
         src={src}
         alt={alt}

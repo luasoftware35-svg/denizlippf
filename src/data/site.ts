@@ -52,7 +52,7 @@ export const services = [
       "Kapı, çamurluk, kaput, tavan",
       "PPF kaplı panellerde kontrollü müdahale",
     ],
-    image: "/images/shot-detail.jpg",
+    image: "/images/frame-pdr.jpg",
     alt: "Inside Denizli boyasız göçük düzeltme öncesi ve sonrası",
   },
   {
@@ -66,7 +66,7 @@ export const services = [
       "Ön uç, tam ön ve tam araç PPF",
       "Far, eşik ve ayna koruması",
     ],
-    image: "/images/shot-wrap.jpg",
+    image: "/images/frame-ppf.jpg",
     alt: "Inside Denizli PPF kaplama atölyesi",
   },
 ] as const;

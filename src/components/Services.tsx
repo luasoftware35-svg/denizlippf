@@ -9,28 +9,28 @@ import { Shot } from "./Shot";
 const cards = [
   {
     title: "Denizli Göçük",
-    image: "/images/shot-detail.jpg",
+    image: "/images/frame-pdr.jpg",
     alt: "Denizli boyasız göçük düzeltme — Inside PDR",
     href: "/denizli-gocuk",
     cat: "gocuk",
   },
   {
     title: "Denizli PPF",
-    image: "/images/shot-wrap.jpg",
+    image: "/images/frame-ppf.jpg",
     alt: "Denizli PPF kaplama — Propel 190 mikron, Inside",
     href: "/denizli-ppf",
     cat: "ppf",
   },
   {
     title: extras[0].title,
-    image: "/images/shot-bmw.jpg",
+    image: "/images/frame-bmw.jpg",
     alt: "Inside tam ön PPF uygulaması",
     href: "#iletisim",
     cat: "ppf",
   },
   {
     title: extras[1].title,
-    image: "/images/shot-volvo.jpg",
+    image: "/images/frame-volvo.jpg",
     alt: "Inside tam araç PPF ve göçük onarımı",
     href: "#iletisim",
     cat: "koruma",

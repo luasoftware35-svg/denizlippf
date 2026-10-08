@@ -3,6 +3,7 @@ import Link from "next/link";
 import { serviceNav } from "@/data/landings";
 import { legalNav, nav, site, waLink } from "@/data/site";
 import { GenuaPartner } from "./GenuaPartner";
+import { InstagramLink } from "./InstagramLink";
 
 export function Footer() {
   return (
@@ -43,7 +44,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Instagram @{site.instagram}
+                @{site.instagram}
               </a>
             </li>
             <li>{site.hours}</li>
@@ -86,6 +87,9 @@ export function Footer() {
             © 2026 {site.legalName}. Tüm hakları saklıdır.
           </p>
           <GenuaPartner />
+        </div>
+        <div className="flex justify-center">
+          <InstagramLink />
         </div>
       </div>
     </footer>

@@ -11,9 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
       images: [
-        `${site.domain}/images/shot-shop.jpg`,
-        `${site.domain}/images/shot-detail.jpg`,
-        `${site.domain}/images/shot-wrap.jpg`,
+        `${site.domain}/images/frame-shop.jpg`,
+        `${site.domain}/images/frame-pdr.jpg`,
+        `${site.domain}/images/frame-ppf.jpg`,
       ],
     },
     ...landings.map((page) => ({

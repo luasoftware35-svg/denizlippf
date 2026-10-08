@@ -10,12 +10,12 @@ export function Hero() {
     >
       <div className="hero-bleed pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] overflow-hidden lg:block">
         <Image
-          src="/images/shop.jpg"
+          src="/images/frame-shop.jpg"
           alt="Inside Denizli göçük düzeltme ve PPF atölyesi, Merkezefendi"
           fill
           priority
           sizes="42vw"
-          className="hero-ken object-cover object-[18%_12%]"
+          className="hero-ken object-cover object-[center_28%]"
         />
       </div>
 
@@ -69,13 +69,13 @@ export function Hero() {
 
         <div className="relative hidden lg:block">
           <div className="hero-inset absolute -left-[32%] top-[20%] z-10 w-[58%] max-w-[340px] overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.14)]">
-            <div className="relative aspect-[4/5]">
+            <div className="shot-frame relative aspect-[4/5]">
               <Image
-                src="/images/shot-detail.jpg"
-                alt="Denizli boyasız göçük düzeltme — Inside PDR"
+                src="/images/frame-bmw.jpg"
+                alt="Inside Denizli atölyesinde teslim edilen araç"
                 fill
                 sizes="340px"
-                className="object-cover object-[center_40%]"
+                className="object-cover object-center"
               />
             </div>
           </div>
@@ -84,12 +84,12 @@ export function Hero() {
 
       <div className="hero-bleed relative min-h-0 w-full flex-1 overflow-hidden lg:hidden">
         <Image
-          src="/images/shop.jpg"
+          src="/images/frame-shop.jpg"
           alt="Inside Denizli göçük düzeltme ve PPF atölyesi, Merkezefendi"
           fill
           priority
           sizes="100vw"
-          className="hero-ken object-cover object-[20%_58%]"
+          className="hero-ken object-cover object-[center_42%]"
         />
       </div>
     </section>
