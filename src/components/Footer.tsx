@@ -104,10 +104,10 @@ export function Footer() {
             <p className="text-center text-[12px] text-muted md:text-left">
               © 2026 {site.legalName}. Tüm hakları saklıdır.
             </p>
-            <GenuaPartner />
+            <InstagramLink />
           </div>
           <div className="flex justify-center">
-            <InstagramLink />
+            <GenuaPartner />
           </div>
         </div>
       </Reveal>
