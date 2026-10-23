@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { CookieConsent } from "@/components/CookieConsent";
 import { HashRedirect } from "@/components/HashRedirect";
 import { ScrollProgress } from "@/components/ScrollProgress";
@@ -91,6 +92,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <HashRedirect />
         {children}
         <CookieConsent />
+        <VercelAnalytics />
       </body>
     </html>
   );
